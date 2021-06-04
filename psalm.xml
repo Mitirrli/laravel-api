@@ -12,6 +12,7 @@
             <directory name="vendor" />
             <directory name="app/Exceptions" />
             <directory name="app/Providers" />
+            <directory name="app/Traits" />
             <directory name="app/Http/Middleware" />
         </ignoreFiles>
     </projectFiles>

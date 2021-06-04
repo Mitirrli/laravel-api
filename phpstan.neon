@@ -14,5 +14,6 @@ parameters:
         - app/Rules
         - app/Http/Middleware
         - app/Exceptions
+        - app/Traits
 
     checkMissingIterableValueType: false

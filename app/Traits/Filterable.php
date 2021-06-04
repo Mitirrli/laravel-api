@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
  */
 trait Filterable
 {
-    public function scopeFilter(Builder $query, ?array $input = null)
+    public function scopeFilter(Builder $query, ?array $input = null): void
     {
         $input = $input && \is_array($input) ? $input : \request()->query();
 
@@ -47,12 +47,12 @@ trait Filterable
      * @param \Illuminate\Database\Eloquent\Builder $query
      * @param string                                $value
      */
-    public function filterOrderBy(Builder $query, $value)
+    public function filterOrderBy(Builder $query, $value): void
     {
         $segments = \explode(',', $value);
 
         foreach ($segments as $segment) {
-            list($key, $direction) = array_pad(\explode(':', $segment), 2, 'desc');
+            [$key, $direction] = \array_pad(\explode(':', $segment), 2, 'desc');
 
             $query->orderBy($key, $direction);
         }
