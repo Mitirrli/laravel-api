@@ -9,6 +9,7 @@ composer create-project mitirrli/laravel-api -vvv
 ```
 
 ##### 安装需要的包
+
 ```bash
 npm i
 ```
@@ -33,14 +34,12 @@ docker exec -it laravel-api composer serve
 composer update-project
 ```
 
-##### 单元测试
+### 调试
 
-```bash
-composer test
+#### telescope
+
+##### 路径
+
 ```
-
-##### 修复代码格式错误
-
-```bash
-composer cs-fix
+http://{{ url }}/telescope
 ```

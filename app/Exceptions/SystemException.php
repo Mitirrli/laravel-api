@@ -8,6 +8,6 @@ class SystemException extends \Exception
 {
     public function render()
     {
-        return \response('接口调用出问题了~', 500);
+        return \response(['message' => '接口调用出问题了~'], 500);
     }
 }

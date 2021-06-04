@@ -46,6 +46,6 @@ class Handler extends ExceptionHandler
         $errors = $exception->errors();
         $firstError = \reset($errors);
 
-        return \response($firstError[0], 422);
+        return \response(['message' => $firstError[0]], 422);
     }
 }
