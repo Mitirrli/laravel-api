@@ -11,6 +11,10 @@
 |
 */
 
+use App\Http\Controllers\DemoController;
+
+Route::post('/demo', [DemoController::class, 'save'])->name('一个demo');
+
 Route::fallback(function () {
     return response('当前未找到路径', 404);
 });

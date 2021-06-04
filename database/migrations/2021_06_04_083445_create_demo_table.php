@@ -14,11 +14,12 @@ class CreateDemoTable extends Migration
     public function up()
     {
         Schema::create('demo', function (Blueprint $table) {
-            $table->id();
-            $table->integer(column: 'int');
-            $table->char(column: 'char', length: 10);
-            $table->timestamps();
-            $table->softDeletes();
+            $table->uuid('id')->primary();
+            $table->integer('int')->unsigned()->comment('整数');
+            $table->char('char', 10)->default('')->comment('字符串');
+            $table->integer('create_time')->unsigned()->comment('创建时间');
+            $table->integer('update_time')->unsigned()->comment('更新时间');
+            $table->integer('delete_time')->unsigned()->nullable()->comment('删除时间');
         });
     }
 

@@ -2,12 +2,16 @@
     "name": "mitirrli/laravel-api",
     "type": "project",
     "description": "Laravel Framework For API.",
-    "keywords": [
-        "framework",
-        "laravel",
-        "api"
-    ],
     "license": "MIT",
+    "support": {
+        "source": "https://github.com/mitirrli/laravel-api",
+        "issues": "https://github.com/mitirrli/laravel-api/issues"
+    },
+    "keywords": [
+        "laravel",
+        "api",
+        "cool"
+    ],
     "require": {
         "php": "^7.3|^8.0",
         "fideloper/proxy": "^4.4",
@@ -36,6 +40,9 @@
         "phpstan/phpstan-mockery": "^0.12.13",
         "phpunit/phpunit": "^9.3.3",
         "vimeo/psalm": "^4.7"
+    },
+    "suggest": {
+        "ext-redis": "For better performance. "
     },
     "autoload": {
         "psr-4": {
