@@ -3,6 +3,7 @@
 $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__ . '/app')
     ->exclude('vendor')
+    ->notPath('#/Controllers/#')
     ->notPath('#/Fixtures/#')
     ->append([
         __DIR__.'/dev-tools/doc.php',
