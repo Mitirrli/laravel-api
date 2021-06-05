@@ -6,8 +6,4 @@ namespace App\Exceptions;
 
 class SystemException extends \Exception
 {
-    public function render()
-    {
-        return \response(['message' => '接口调用出问题了~'], 500);
-    }
 }

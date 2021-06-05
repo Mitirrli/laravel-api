@@ -23,6 +23,7 @@
         "bugsnag",
         "cachable",
         "cghooks",
+        "cond",
         "cooldown",
         "csrf",
         "dbal",
@@ -38,11 +39,14 @@
         "labs",
         "larastan",
         "laravel",
+        "maduro",
         "mitirrli",
+        "nuno",
         "nunomaduro",
         "phpstan",
         "phpunit",
         "predis",
+        "rewrite",
         "thecodingmachine"
     ],
 }

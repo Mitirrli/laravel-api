@@ -28,7 +28,7 @@
         "brainmaestro/composer-git-hooks": "^2.8",
         "doctrine/dbal": "^3.1",
         "ekino/phpstan-banned-code": "^0.4.0",
-        "facade/ignition": "^2.9",
+        "facade/ignition": "^2.10",
         "fakerphp/faker": "^1.9.1",
         "friendsofphp/php-cs-fixer": "^2.16.7",
         "laravel/sail": "^1.0.1",
@@ -85,7 +85,10 @@
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta"
         ],
-        "serve": "php -S 0.0.0.0:8000 -t public",
+        "serve": [
+            "chmod -R 777 storage",
+            "php -S 0.0.0.0:8000 -t public"
+        ],
         "cghooks": "vendor/bin/cghooks",
         "check-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi",
         "cs-fix": "php-cs-fixer fix --using-cache=no --config=.php_cs --ansi",
@@ -101,8 +104,12 @@
     "extra": {
         "laravel": {
             "dont-discover": [
-                "barryvdh/laravel-ide-helper",
-                "laravel/telescope"
+                "laravel/sail",
+                "laravel/tinker",
+                "facade/ignition",
+                "laravel/telescope",
+                "nunomaduro/collision",
+                "barryvdh/laravel-ide-helper"
             ]
         },
         "hooks": {

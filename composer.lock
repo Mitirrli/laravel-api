@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "663be9d132704320756751627b1e0a49",
+    "content-hash": "8b8bb33b35e1333fb35d51de122ec1db",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7026,7 +7026,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/facade/flare-client-php/zipball/47b639dc02bcfdfc4ebb83de703856fa01e35f5f",
                 "reference": "47b639dc02bcfdfc4ebb83de703856fa01e35f5f",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "facade/ignition-contracts": "~1.0",
@@ -7091,7 +7097,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/facade/ignition/zipball/508d80f91de953617977e5666f8953669b6e81f2",
                 "reference": "508d80f91de953617977e5666f8953669b6e81f2",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "ext-json": "*",

@@ -6,7 +6,7 @@ use Illuminate\Support\Str;
 
 trait UseUuidAsPrimaryKey
 {
-    public static function bootUseUuidAsPrimaryKey() //: void
+    public static function bootUseUuidAsPrimaryKey(): void //: void
     {
         static::creating(function (self $model): void {
             /* @var \Illuminate\Database\Eloquent\Model|\App\Traits\UseUuidAsPrimaryKey $model */

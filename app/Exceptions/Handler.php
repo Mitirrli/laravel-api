@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Response;
 use Illuminate\Validation\ValidationException;
 
 class Handler extends ExceptionHandler
@@ -38,14 +39,28 @@ class Handler extends ExceptionHandler
     }
 
     /**
-     * @param \Illuminate\Http\Request                   $request
-     * @param \Illuminate\Validation\ValidationException $exception
+     * Render an exception into an HTTP response.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @param \Throwable               $e
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Throwable
      */
-    protected function invalidJson($request, ValidationException $exception)
+    public function render($request, \Throwable $e): \Symfony\Component\HttpFoundation\Response
     {
-        $errors = $exception->errors();
-        $firstError = \reset($errors);
+        if ($e instanceof BusinessException) {
+            return new Response(['code' => $e->getCode(), 'message' => $e->getMessage()]);
+        }
 
-        return \response(['message' => $firstError[0]], 422);
+        if ($e instanceof ValidationException) {
+            $errors = $e->errors();
+            $firstError = \reset($errors);
+
+            return new Response($firstError[0], 422);
+        }
+
+        return new Response('', 500);
     }
 }
