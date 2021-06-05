@@ -11,7 +11,8 @@
 |
 */
 
-Route::post('/demo', ['App\Http\Controllers\DemoController', 'save'])->name('一个demo');
+Route::post('/demo', ['App\Http\Controllers\DemoController', 'save'])->name('保存demo');
+Route::get('/demo/list', ['App\Http\Controllers\DemoController', 'list'])->middleware('etag')->name('列表demo');
 
 Route::fallback(function () {
     return new \Illuminate\Http\Response('', 404);

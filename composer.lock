@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b8bb33b35e1333fb35d51de122ec1db",
+    "content-hash": "f3da007e6cbacab5b59021f43d243422",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5382,6 +5382,72 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.10.0"
             },
             "time": "2021-03-09T10:59:23+00:00"
+        },
+        {
+            "name": "werk365/etagconditionals",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/365Werk/etagconditionals.git",
+                "reference": "947743c7b711a0669d1dd39f4e8797b62159dcb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/365Werk/etagconditionals/zipball/947743c7b711a0669d1dd39f4e8797b62159dcb8",
+                "reference": "947743c7b711a0669d1dd39f4e8797b62159dcb8",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "illuminate/support": "~7|~8"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~5|~6",
+                "phpunit/phpunit": "~8.0|~9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Werk365\\EtagConditionals\\EtagConditionalsServiceProvider"
+                    ],
+                    "aliases": {
+                        "EtagConditionals": "Werk365\\EtagConditionals\\Facades\\EtagConditionals"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Werk365\\EtagConditionals\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hergen Dillema",
+                    "email": "h.dillema@365werk.nl",
+                    "homepage": "https://365werk.nl"
+                }
+            ],
+            "description": "Laravel package to enable support for ETags and handling If-Match and If-None-Match conditional requests",
+            "homepage": "https://github.com/werk365/etagconditionals",
+            "keywords": [
+                "EtagConditionals",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/365Werk/etagconditionals/issues",
+                "source": "https://github.com/365Werk/etagconditionals/tree/1.2.0"
+            },
+            "time": "2021-06-03T09:16:46+00:00"
         }
     ],
     "packages-dev": [

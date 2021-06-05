@@ -14,8 +14,13 @@ class DemoController extends Controller
         $this->demo = $demo;
     }
 
-    public function save(DemoRequest $request): void
+    public function save(DemoRequest $request)
     {
         $demo = $this->demo::create($request->validated());
+    }
+
+    public function list()
+    {
+        return $this->demo->all();
     }
 }

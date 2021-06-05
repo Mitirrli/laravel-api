@@ -13,6 +13,7 @@ parameters:
     excludePaths:
         - app/Rules
         - app/Http/Middleware
+        - app/Http/Controllers
         - app/Exceptions
         - app/Traits
 

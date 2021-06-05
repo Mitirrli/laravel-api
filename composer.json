@@ -21,7 +21,8 @@
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
         "predis/predis": "^1.1",
-        "thecodingmachine/phpstan-safe-rule": "^1.0"
+        "thecodingmachine/phpstan-safe-rule": "^1.0",
+        "werk365/etagconditionals": "^1.2"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.10",
