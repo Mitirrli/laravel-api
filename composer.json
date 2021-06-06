@@ -10,6 +10,7 @@
     "keywords": [
         "laravel",
         "api",
+        "redis",
         "cool"
     ],
     "require": {
@@ -22,7 +23,8 @@
         "laravel/framework": "^8.40",
         "thecodingmachine/phpstan-safe-rule": "^1.0",
         "tymon/jwt-auth": "dev-develop",
-        "werk365/etagconditionals": "^1.2"
+        "werk365/etagconditionals": "^1.2",
+        "wikimedia/composer-merge-plugin": "dev-master"
     },
     "require-dev": {
         "laravel/tinker": "^2.6",
@@ -44,7 +46,8 @@
         "vimeo/psalm": "^4.7"
     },
     "suggest": {
-        "ext-redis": "For better performance. "
+        "ext-redis": "For better performance. ",
+        "monolog/monolog": "Allows more advanced logging of the application flow"
     },
     "autoload": {
         "psr-4": {
@@ -118,6 +121,18 @@
                 "nunomaduro/collision",
                 "barryvdh/laravel-ide-helper"
             ]
+        },
+        "merge-plugin": {
+            "include": [
+                "repository.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": true,
+            "merge-extra": false,
+            "merge-extra-deep": false,
+            "merge-scripts": false
         },
         "hooks": {
             "config": {

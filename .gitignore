@@ -17,4 +17,5 @@ yarn-error.log
 _ide_helper*
 .phpstorm.meta.php
 cghooks.lock
+repository.json
 
