@@ -25,7 +25,7 @@ docker-compose up --build -d
 ##### 快速启动项目
 
 ```bash
-docker exec -it laravel-api composer serve
+docker exec laravel-api composer serve
 ```
 
 ##### 更新项目

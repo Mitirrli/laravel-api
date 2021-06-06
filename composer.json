@@ -93,7 +93,7 @@
         "cghooks": "vendor/bin/cghooks",
         "check-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi",
         "cs-fix": "php-cs-fixer fix --using-cache=no --config=.php_cs --ansi",
-        "test": "@php artisan test",
+        "test": "docker exec laravel-api php artisan test",
         "stan": "vendor/bin/phpstan analyse -c phpstan.neon --memory-limit=2G --verbose",
         "psalm": "vendor/bin/psalm --show-info=true"
     },
