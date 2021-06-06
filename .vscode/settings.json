@@ -17,6 +17,7 @@
     "intelephense.environment.phpVersion": "8.0.6",
     "cSpell.ignoreWords": [
         "autoload",
+        "autoloaded",
         "autoloader",
         "barryvdh",
         "brainmaestro",
@@ -30,7 +31,9 @@
         "dbal",
         "dont",
         "ekino",
+        "encrypter",
         "etag",
+        "etagconditionals",
         "fabbot",
         "fakerphp",
         "fideloper",
@@ -40,6 +43,7 @@
         "getenv",
         "guzzlehttp",
         "heuvel",
+        "jenssegers",
         "labs",
         "larastan",
         "laravel",
@@ -56,6 +60,7 @@
         "symfony",
         "thecodingmachine",
         "typehint",
-        "unsets"
+        "unsets",
+        "werk"
     ],
 }

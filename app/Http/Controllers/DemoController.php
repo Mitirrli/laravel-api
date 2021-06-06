@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\DemoRequest;
 use App\Models\Demo;
+use Illuminate\Support\Facades\Redis;
 
 class DemoController extends Controller
 {
