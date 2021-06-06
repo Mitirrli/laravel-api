@@ -12,3 +12,10 @@ services:
             - ./:/www
         tty: true
         restart: always
+    laravel-redis:
+        container_name: laravel-redis
+        image: redis
+        command: redis-server --requirepass root:root
+        ports:
+            - "6397:6379"
+        restart: always
