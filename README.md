@@ -43,3 +43,11 @@ composer update-project
 ```
 http://{{ url }}/telescope
 ```
+
+#### tinker
+
+##### 使用
+
+```
+php artisan tinker
+```

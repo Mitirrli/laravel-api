@@ -14,14 +14,15 @@
     ],
     "require": {
         "php": "^7.3|^8.0",
-        "laravel/framework": "^8.40",
         "fideloper/proxy": "^4.4",
-        "jenssegers/agent": "^2.6",
-        "guzzlehttp/guzzle": "^7.0.1",
         "fruitcake/laravel-cors": "^2.0",
-        "werk365/etagconditionals": "^1.2",
         "genealabs/laravel-model-caching": "^0.11.3",
-        "thecodingmachine/phpstan-safe-rule": "^1.0"
+        "guzzlehttp/guzzle": "^7.0.1",
+        "jenssegers/agent": "^2.6",
+        "laravel/framework": "^8.40",
+        "thecodingmachine/phpstan-safe-rule": "^1.0",
+        "tymon/jwt-auth": "dev-develop",
+        "werk365/etagconditionals": "^1.2"
     },
     "require-dev": {
         "laravel/tinker": "^2.6",
@@ -89,6 +90,11 @@
         "serve": [
             "chmod -R 777 storage",
             "php -S 0.0.0.0:8000 -t public"
+        ],
+        "deploy": [
+            "composer install --optimize-autoloader --no-dev",
+            "@php artisan config:cache",
+            "@php artisan route:cache"
         ],
         "cghooks": "vendor/bin/cghooks",
         "check-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi",

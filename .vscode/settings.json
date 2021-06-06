@@ -16,6 +16,7 @@
     "php.suggest.basic": false,
     "intelephense.environment.phpVersion": "8.0.6",
     "cSpell.ignoreWords": [
+        "aliyuncs",
         "autoload",
         "autoloaded",
         "autoloader",
@@ -61,6 +62,7 @@
         "rewrite",
         "symfony",
         "thecodingmachine",
+        "tymon",
         "typehint",
         "unsets",
         "werk"
