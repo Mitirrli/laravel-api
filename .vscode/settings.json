@@ -16,7 +16,9 @@
     "php.suggest.basic": false,
     "intelephense.environment.phpVersion": "8.0.6",
     "cSpell.ignoreWords": [
+        "adcode",
         "aliyuncs",
+        "amap",
         "autoload",
         "autoloaded",
         "autoloader",
@@ -59,6 +61,8 @@
         "phpstan",
         "phpunit",
         "predis",
+        "regeo",
+        "regeocode",
         "rewrite",
         "symfony",
         "thecodingmachine",

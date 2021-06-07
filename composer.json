@@ -21,6 +21,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "jenssegers/agent": "^2.6",
         "laravel/framework": "^8.40",
+        "laravel/octane": "^1.0",
         "thecodingmachine/phpstan-safe-rule": "^1.0",
         "tymon/jwt-auth": "dev-develop",
         "werk365/etagconditionals": "^1.2",
@@ -130,8 +131,8 @@
             "replace": false,
             "ignore-duplicates": false,
             "merge-dev": true,
-            "merge-extra": false,
-            "merge-extra-deep": false,
+            "merge-extra": true,
+            "merge-extra-deep": true,
             "merge-scripts": false
         },
         "hooks": {

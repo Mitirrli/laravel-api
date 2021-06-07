@@ -12,6 +12,7 @@ services:
             - ./:/www
         tty: true
         restart: always
+        
     laravel-redis:
         container_name: laravel-redis
         image: redis

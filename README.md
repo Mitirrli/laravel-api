@@ -1,6 +1,6 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-### 安装
+### 本地开发
 
 ##### 创建项目
 
@@ -22,16 +22,32 @@ docker-compose up --build -d
 
 ### 常用命令
 
-##### 快速启动项目
+#### 更新项目
+
+```
+composer update-project
+```
+
+#### 使用fpm
+
+##### 启动项目
 
 ```bash
 docker exec laravel-api composer serve
 ```
 
-##### 更新项目
+#### 使用octane
 
-```bash
-composer update-project
+##### 启动项目
+
+```
+docker exec laravel-api php artisan octane:start
+```
+
+##### 设置host并监控文件改变
+
+```
+docker exec laravel-api php artisan octane:start --host=0.0.0.0 --watch
 ```
 
 ### 调试
@@ -41,7 +57,7 @@ composer update-project
 ##### 路径
 
 ```
-http://{{ url }}/telescope
+{{url}}/telescope
 ```
 
 #### tinker
