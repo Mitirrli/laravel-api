@@ -1,6 +1,6 @@
-FROM php:8.0.6-fpm-alpine
+ARG PHP_VERSION=8.0.6-fpm-alpine
+FROM php:${PHP_VERSION}
 
-# 使用国内镜像
 RUN echo http://mirrors.aliyun.com/alpine/v3.12/main > /etc/apk/repositories \
     && echo  http://mirrors.aliyun.com/alpine/v3.12/community >> /etc/apk/repositorie
 

@@ -2,8 +2,8 @@
     "remote.SSH.defaultForwardedPorts": [
         {
             "name": "php",
-            "localPort": 8088,
-            "remotePort": 8088,
+            "localPort": 8098,
+            "remotePort": 8098,
         }
     ],
     "files.autoSave": "onFocusChange",

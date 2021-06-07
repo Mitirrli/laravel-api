@@ -170,6 +170,7 @@ return [
     'watch' => [
         'app',
         'bootstrap',
+        'package',
         'config',
         'database',
         'public/**/*.php',
