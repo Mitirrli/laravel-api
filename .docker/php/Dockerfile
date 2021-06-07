@@ -1,4 +1,4 @@
-FROM php:8.0.6-fpm-alpine
+FROM php:8.0.7-fpm-alpine
 
 # 使用国内镜像
 RUN echo http://mirrors.aliyun.com/alpine/v3.12/main > /etc/apk/repositories \
