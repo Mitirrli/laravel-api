@@ -17,6 +17,7 @@
     "intelephense.environment.phpVersion": "8.0.6",
     "cSpell.ignoreWords": [
         "adcode",
+        "alibaba",
         "aliyuncs",
         "amap",
         "autoload",

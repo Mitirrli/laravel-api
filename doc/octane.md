@@ -13,5 +13,5 @@ php artisan octane:install
 ### 使用swoole server
 
 ```
-php artisan octane:install
+php artisan octane:start
 ```
