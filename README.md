@@ -33,7 +33,7 @@ composer update-project
 ##### 启动项目
 
 ```bash
-docker exec -it laravel-api composer serve
+composer serve
 ```
 
 #### 使用octane
@@ -41,13 +41,7 @@ docker exec -it laravel-api composer serve
 ##### 启动项目
 
 ```
-docker exec -it laravel-api php artisan octane:start
-```
-
-##### 设置host并监控文件改变
-
-```
-docker exec -it laravel-api php artisan octane:start --host=0.0.0.0 --watch
+composer octane
 ```
 
 ### 调试

@@ -92,10 +92,8 @@
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta"
         ],
-        "serve": [
-            "chmod -R 777 storage",
-            "php -S 0.0.0.0:8000 -t public"
-        ],
+        "serve": "docker exec -it laravel-api chmod -R 777 storage && php -S 0.0.0.0:8000 -t public",
+        "octane": "docker exec -it laravel-api php artisan octane:start --host=0.0.0.0 --watch",
         "deploy": [
             "composer install --optimize-autoloader --no-dev",
             "@php artisan config:cache",
