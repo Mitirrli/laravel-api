@@ -61,7 +61,9 @@ RUN wget https://github.com/swoole/swoole-src/archive/v${PHPSWOOLE_VERSION}.tar.
     && echo "opcache.jit = 1205" >> /usr/local/etc/php/conf.d/00_opcache.ini \
     && echo "opcache.jit_buffer_size = 64M" >> /usr/local/etc/php/conf.d/00_opcache.ini \
     && echo "opcache.enable_cli = 'On'" >> /usr/local/etc/php/conf.d/00_opcache.ini \
-    && echo "swoole.use_shortname = 'Off'" >> /usr/local/etc/php/conf.d/50_swoole.ini
+    && echo "swoole.use_shortname = 'Off'" >> /usr/local/etc/php/conf.d/50_swoole.ini \
+    && echo 'display_errors = Off' >> /usr/local/etc/php/conf.d/50_error.ini \
+    && echo 'swoole.display_errors = Off' >> /usr/local/etc/php/conf.d/50_error.ini
 
 WORKDIR /www
 

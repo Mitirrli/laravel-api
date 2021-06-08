@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('拉取 代码'){
+        stage('代码 拉取') {
             steps {
                 echo "拉取 ${gitlabBranch} 分支的代码"
 
@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-        stage('镜像 部署'){
+        stage('镜像 推送') {
             steps {
                 script {
                     commitTemp = sh returnStdout: true, script: 'git describe --tags --always --dirty="-dev"'
@@ -35,11 +35,19 @@ pipeline {
                 """
             }
         }
+
+        stage('容器 部署') {
+            steps {
+                sh """
+                    chmod a+x .deploy.${gitBranch}.sh
+
+                    ./.deploy.${gitBranch}.sh
+                """
+            }
+        }
     }
 
-    // 流水线结束通知
     post {
-        // 成功通知
         success {
             dingtalk (
                 robot: "${ROBOT}",
