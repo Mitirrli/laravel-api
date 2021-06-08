@@ -17,7 +17,6 @@
     "require": {
         "php": "^7.3|^8.0",
         "alibabacloud/sdk": "^1.8",
-        "barryvdh/laravel-ide-helper": "^2.10",
         "brainmaestro/composer-git-hooks": "^2.8",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
@@ -32,14 +31,15 @@
         "wikimedia/composer-merge-plugin": "dev-master"
     },
     "require-dev": {
-        "laravel/tinker": "^2.6",
+        "barryvdh/laravel-ide-helper": "^2.10",
         "doctrine/dbal": "^3.1",
         "ekino/phpstan-banned-code": "^0.4.0",
         "facade/ignition": "^2.10",
         "fakerphp/faker": "^1.9.1",
         "friendsofphp/php-cs-fixer": "^2.16.7",
-        "laravel/sail": "^1.0.1",
+        "laravel/sail": "^1.7",
         "laravel/telescope": "^4.4",
+        "laravel/tinker": "^2.6",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.4",
         "nunomaduro/larastan": "^0.7.6",
