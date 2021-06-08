@@ -22,4 +22,3 @@ repository.json
 rr
 .rr.yaml
 supervisord.pid
-JenkinsFile
