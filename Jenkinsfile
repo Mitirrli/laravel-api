@@ -51,8 +51,6 @@ pipeline {
                 text: [
                     "# 🐳 ${APPLICATION}",
                     '---',
-                    "> 构建信息:",
-                    "",
                     "构建应用:<font color='#000000'>${APPLICATION}</font>",
                     "",
                     "构建类型:<font color='#000000'>${gitlabActionType}</font>",
