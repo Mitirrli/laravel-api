@@ -16,5 +16,6 @@ parameters:
         - app/Http/Controllers
         - app/Exceptions
         - app/Traits
+        - vendor
 
     checkMissingIterableValueType: false
