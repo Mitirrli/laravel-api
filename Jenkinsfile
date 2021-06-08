@@ -15,7 +15,7 @@ pipeline {
 
                 echo "安装依赖 composer"
                 sh """
-                    docker exec laravel-api composer i --dev
+                    docker exec laravel-api composer i
                 """
             }
         }
