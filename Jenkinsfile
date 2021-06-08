@@ -13,11 +13,9 @@ pipeline {
                     cp -f ".env.${gitlabBranch}" .env
                 """
 
-                echo "安装 composer"
+                echo "安装依赖 composer"
                 sh """
-                    export COMPOSER_HOME="/root/.config/composer"
-
-                    composer i --dev --ignore-platform-reqs
+                    docker exec laravel-api composer i --dev
                 """
             }
         }
