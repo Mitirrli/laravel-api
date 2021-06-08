@@ -1,5 +1,4 @@
-ARG PHP_VERSION=8.0.6-fpm-alpine
-FROM php:${PHP_VERSION}
+FROM php:8.0.7-fpm-alpine
 
 RUN echo http://mirrors.aliyun.com/alpine/v3.12/main > /etc/apk/repositories \
     && echo  http://mirrors.aliyun.com/alpine/v3.12/community >> /etc/apk/repositorie
@@ -52,19 +51,19 @@ RUN wget http://pecl.php.net/get/xdebug-${PHPXDEBUG_VERSION}.tgz -O /tmp/xdebug.
 
 ENV PHPSWOOLE_VERSION=4.6.7
 RUN wget https://github.com/swoole/swoole-src/archive/v${PHPSWOOLE_VERSION}.tar.gz -O swoole.tar.gz \
-  && mkdir -p swoole \
-  && tar -xf swoole.tar.gz -C swoole --strip-components=1 \
-  && rm swoole.tar.gz \
-  && ( \
-    cd swoole \
-      && phpize \
-      && ./configure --enable-mysqlnd --enable-sockets --enable-openssl --enable-http2 \
-      && make -j$(nproc) \
-      && make install \
+    && mkdir -p swoole \
+    && tar -xf swoole.tar.gz -C swoole --strip-components=1 \
+    && rm swoole.tar.gz \
+    && ( \
+        cd swoole \
+        && phpize \
+        && ./configure --enable-mysqlnd --enable-sockets --enable-openssl --enable-http2 \
+        && make -j$(nproc) \
+        && make install \
     ) \
-  && rm -r swoole \
-  && docker-php-ext-enable swoole \
-  && echo "swoole.use_shortname = 'Off'" >> /usr/local/etc/php/conf.d/swoole.ini
+    && rm -r swoole \
+    && docker-php-ext-enable swoole \
+    && echo "swoole.use_shortname = 'Off'" >> /usr/local/etc/php/conf.d/swoole.ini
 
 RUN echo 'error_reporting = E_ALL & ~E_NOTICE' >> /usr/local/etc/php/conf.d/error.ini \
     && echo 'display_errors = On' >> /usr/local/etc/php/conf.d/error.ini

@@ -9,6 +9,7 @@
     },
     "keywords": [
         "laravel",
+        "octane",
         "api",
         "redis",
         "cool"
@@ -16,6 +17,8 @@
     "require": {
         "php": "^7.3|^8.0",
         "alibabacloud/sdk": "^1.8",
+        "barryvdh/laravel-ide-helper": "^2.10",
+        "brainmaestro/composer-git-hooks": "^2.8",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "genealabs/laravel-model-caching": "^0.11.3",
@@ -30,8 +33,6 @@
     },
     "require-dev": {
         "laravel/tinker": "^2.6",
-        "barryvdh/laravel-ide-helper": "^2.10",
-        "brainmaestro/composer-git-hooks": "^2.8",
         "doctrine/dbal": "^3.1",
         "ekino/phpstan-banned-code": "^0.4.0",
         "facade/ignition": "^2.10",
@@ -77,8 +78,7 @@
         "post-update-cmd": [
             "cghooks update",
             "@php artisan ide-helper:generate",
-            "@php artisan ide-helper:meta",
-            "@php artisan telescope:publish --ansi"
+            "@php artisan ide-helper:meta"
         ],
         "post-merge": "composer install",
         "post-install-cmd": [
@@ -102,11 +102,11 @@
             "@php artisan route:cache"
         ],
         "cghooks": "vendor/bin/cghooks",
-        "check-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi",
-        "cs-fix": "php-cs-fixer fix --using-cache=no --config=.php_cs --ansi",
-        "test": "docker exec laravel-api php artisan test",
-        "stan": "vendor/bin/phpstan analyse -c phpstan.neon --memory-limit=2G --verbose",
-        "psalm": "vendor/bin/psalm --show-info=true"
+        "check-style": "docker exec laravel-api vendor/bin/php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi",
+        "cs-fix": "docker exec laravel-api vendor/bin/php-cs-fixer fix --using-cache=no --config=.php_cs --ansi",
+        "test": "docker exec laravel-api vendor/bin/phpunit --colors=always --testdox",
+        "stan": "docker exec laravel-api vendor/bin/phpstan analyse -c phpstan.neon --memory-limit=2G --verbose",
+        "psalm": "docker exec laravel-api vendor/bin/psalm --show-info=true"
     },
     "scripts-descriptions": {
         "test": "Run all tests.",
@@ -120,8 +120,7 @@
                 "laravel/tinker",
                 "facade/ignition",
                 "laravel/telescope",
-                "nunomaduro/collision",
-                "barryvdh/laravel-ide-helper"
+                "nunomaduro/collision"
             ]
         },
         "merge-plugin": {

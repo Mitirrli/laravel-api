@@ -21,3 +21,4 @@ cghooks.lock
 repository.json
 rr
 .rr.yaml
+supervisord.pid
