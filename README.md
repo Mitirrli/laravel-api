@@ -28,17 +28,15 @@ docker-compose up --build -d
 composer update-project
 ```
 
-#### 使用fpm
+#### 启动项目
 
-##### 启动项目
+##### fpm
 
 ```bash
 composer serve
 ```
 
-#### 使用octane
-
-##### 启动项目
+##### octane
 
 ```
 composer octane
