@@ -116,6 +116,7 @@
     "extra": {
         "laravel": {
             "dont-discover": [
+                "barryvdh/laravel-ide-helper",
                 "laravel/sail",
                 "laravel/tinker",
                 "facade/ignition",
