@@ -13,3 +13,9 @@ git log
 ```
 git rebase -i SHA1 SHA1
 ```
+
+### 合并到原分支
+
+```
+git push -f
+```
