@@ -26,6 +26,8 @@
         "jenssegers/agent": "^2.6",
         "laravel/framework": "^8.40",
         "laravel/octane": "^1.0",
+        "laravel/scout": "^9.1",
+        "matchish/laravel-scout-elasticsearch": "^5.0",
         "thecodingmachine/phpstan-safe-rule": "^1.0",
         "tymon/jwt-auth": "dev-develop",
         "werk365/etagconditionals": "^1.2",

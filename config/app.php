@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        Matchish\ScoutElasticSearch\ElasticSearchServiceProvider::class,
 
         /*
          * Application Service Providers...
