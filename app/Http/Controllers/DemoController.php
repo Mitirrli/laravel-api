@@ -21,6 +21,6 @@ class DemoController extends Controller
 
     public function list()
     {
-        return $this->demo->all();
+        return $this->demo->first();
     }
 }
