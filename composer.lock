@@ -158,16 +158,16 @@
         },
         {
             "name": "alibabacloud/sdk",
-            "version": "1.8.1010",
+            "version": "1.8.1013",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aliyun/openapi-sdk-php.git",
-                "reference": "ed1f7026ef0a3d17338d9826d38660214e5e1d77"
+                "reference": "e57ab4ed2da1d1346a117584226dd883f5801797"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aliyun/openapi-sdk-php/zipball/ed1f7026ef0a3d17338d9826d38660214e5e1d77",
-                "reference": "ed1f7026ef0a3d17338d9826d38660214e5e1d77",
+                "url": "https://api.github.com/repos/aliyun/openapi-sdk-php/zipball/e57ab4ed2da1d1346a117584226dd883f5801797",
+                "reference": "e57ab4ed2da1d1346a117584226dd883f5801797",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -398,7 +398,7 @@
                 "issues": "https://github.com/aliyun/openapi-sdk-php/issues",
                 "source": "https://github.com/aliyun/openapi-sdk-php"
             },
-            "time": "2021-06-05T11:41:55+00:00"
+            "time": "2021-06-08T15:26:05+00:00"
         },
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -3474,16 +3474,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.45.1",
+            "version": "v8.46.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "dc2f0bb02c3eb4b27669d626bb3e810db8e7749d"
+                "reference": "a18266c612e0e6aba5e0174b3c873d2d217dccfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/dc2f0bb02c3eb4b27669d626bb3e810db8e7749d",
-                "reference": "dc2f0bb02c3eb4b27669d626bb3e810db8e7749d",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/a18266c612e0e6aba5e0174b3c873d2d217dccfb",
+                "reference": "a18266c612e0e6aba5e0174b3c873d2d217dccfb",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3644,20 +3644,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-06-03T16:39:17+00:00"
+            "time": "2021-06-08T13:36:46+00:00"
         },
         {
             "name": "laravel/octane",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/octane.git",
-                "reference": "ce2015794b2b55683b900984af1bec8a46f86836"
+                "reference": "46ef9bd1fca6193206b7c255f531cc8250fb9775"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/octane/zipball/ce2015794b2b55683b900984af1bec8a46f86836",
-                "reference": "ce2015794b2b55683b900984af1bec8a46f86836",
+                "url": "https://api.github.com/repos/laravel/octane/zipball/46ef9bd1fca6193206b7c255f531cc8250fb9775",
+                "reference": "46ef9bd1fca6193206b7c255f531cc8250fb9775",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3726,20 +3726,20 @@
                 "issues": "https://github.com/laravel/octane/issues",
                 "source": "https://github.com/laravel/octane"
             },
-            "time": "2021-06-01T17:32:24+00:00"
+            "time": "2021-06-08T14:37:39+00:00"
         },
         {
             "name": "laravel/scout",
-            "version": "v9.1.0",
+            "version": "v9.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/scout.git",
-                "reference": "b31bc1edb6498ae5807011091cb41624f109e0d5"
+                "reference": "ce621bee3c41aad981cde75adcf751d4cea69646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/scout/zipball/b31bc1edb6498ae5807011091cb41624f109e0d5",
-                "reference": "b31bc1edb6498ae5807011091cb41624f109e0d5",
+                "url": "https://api.github.com/repos/laravel/scout/zipball/ce621bee3c41aad981cde75adcf751d4cea69646",
+                "reference": "ce621bee3c41aad981cde75adcf751d4cea69646",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3804,7 +3804,7 @@
                 "issues": "https://github.com/laravel/scout/issues",
                 "source": "https://github.com/laravel/scout"
             },
-            "time": "2021-05-13T07:57:29+00:00"
+            "time": "2021-06-08T14:48:33+00:00"
         },
         {
             "name": "lcobucci/jwt",
@@ -5423,7 +5423,7 @@
             "dist": {
                 "type": "path",
                 "url": "./package/tool",
-                "reference": "59f8c025ab60a14b81a8bb28ddfd0e9072894ca3"
+                "reference": "6f5c9606aa8ee6b4599abeb16f7f3cb831e95c2c"
             },
             "require": {
                 "aliyuncs/oss-sdk-php": "^2.4",
@@ -10441,16 +10441,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.7.0",
+            "version": "v1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "d1f703d73f782af5427697cdc5023395cd341963"
+                "reference": "77fb31eb48de9971af1fe0c6b47be3da6b869dfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/d1f703d73f782af5427697cdc5023395cd341963",
-                "reference": "d1f703d73f782af5427697cdc5023395cd341963",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/77fb31eb48de9971af1fe0c6b47be3da6b869dfd",
+                "reference": "77fb31eb48de9971af1fe0c6b47be3da6b869dfd",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -10503,7 +10503,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-05-25T16:41:13+00:00"
+            "time": "2021-06-08T15:18:38+00:00"
         },
         {
             "name": "laravel/telescope",

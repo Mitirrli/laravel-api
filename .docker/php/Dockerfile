@@ -4,6 +4,7 @@ RUN echo http://mirrors.aliyun.com/alpine/v3.12/main > /etc/apk/repositories \
     && echo  http://mirrors.aliyun.com/alpine/v3.12/community >> /etc/apk/repositorie
 
 RUN apk add --no-cache oniguruma-dev \
+    git \
     nodejs \
     npm \
     curl-dev \
@@ -50,7 +51,7 @@ RUN wget http://pecl.php.net/get/xdebug-${PHPXDEBUG_VERSION}.tgz -O /tmp/xdebug.
     && echo 'xdebug.log_level = 0' >> /usr/local/etc/php/conf.d/xdebug.ini
 
 ENV PHPSWOOLE_VERSION=4.6.7
-RUN wget https://github.com/swoole/swoole-src/archive/v${PHPSWOOLE_VERSION}.tar.gz -O swoole.tar.gz \
+RUN wget https://gitee.com/swoole/swoole/repository/archive/v${PHPSWOOLE_VERSION}.tar.gz -O swoole.tar.gz \
     && mkdir -p swoole \
     && tar -xf swoole.tar.gz -C swoole --strip-components=1 \
     && rm swoole.tar.gz \

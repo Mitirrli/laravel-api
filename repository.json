@@ -4,8 +4,8 @@
     },
     "repositories": {
         "qjdata/tool": {
-            "type": "vcs",
-            "url": "http://git.quanjingshuju.com/yaoxiebang2/tool.git"
+            "type": "path",
+            "url": "./package/tool/"
         }
     }
 }

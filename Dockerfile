@@ -39,7 +39,7 @@ RUN curl -L -o /tmp/redis.tar.gz https://github.com/phpredis/phpredis/archive/${
 RUN docker-php-ext-install pdo_mysql bcmath phpredis opcache pcntl sockets
 
 ENV PHPSWOOLE_VERSION=4.6.7
-RUN wget https://github.com/swoole/swoole-src/archive/v${PHPSWOOLE_VERSION}.tar.gz -O swoole.tar.gz \
+RUN wget https://gitee.com/swoole/swoole/repository/archive/v${PHPSWOOLE_VERSION}.tar.gz -O swoole.tar.gz \
     && mkdir -p swoole \
     && tar -xf swoole.tar.gz -C swoole --strip-components=1 \
     && rm swoole.tar.gz \
