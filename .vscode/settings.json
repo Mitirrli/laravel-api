@@ -49,6 +49,7 @@
         "getenv",
         "guzzlehttp",
         "heuvel",
+        "huanglei",
         "jenssegers",
         "labs",
         "larastan",

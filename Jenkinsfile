@@ -5,8 +5,12 @@ pipeline {
         stage('代码 拉取') {
             steps {
                 echo "拉取 ${gitlabBranch} 分支的代码"
-
                 checkout([$class: 'GitSCM', branches: [[name: "*/${gitlabBranch}"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: "${credentialsId}", url: "${REPOSITORY}"]]])
+
+                echo "拉取 子模块"
+                sh """
+                    git submodule init && git submodule update
+                """
 
                 echo "拉取 环境变量"
                 sh """
@@ -29,6 +33,8 @@ pipeline {
                 }
 
                 sh """
+                    export COMMIT_TAG=${commitTag}
+                    
                     docker build  -t "${IMAGE_REPO}/${NAMESPACE}/${APPLICATION}:${commitTag}" .
                     docker login -u ${IMAGE_USER} -p \"${IMAGE_PASS}\" ${IMAGE_REPO}
                     docker push ${IMAGE_REPO}/${NAMESPACE}/${APPLICATION}:${commitTag}
@@ -39,9 +45,9 @@ pipeline {
         stage('容器 部署') {
             steps {
                 sh """
-                    chmod a+x .deploy.${gitBranch}.sh
+                    chmod a+x .deploy.${gitlabBranch}.sh
 
-                    ./.deploy.${gitBranch}.sh
+                    ./.deploy.${gitlabBranch}.sh
                 """
             }
         }
