@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cd6307350b6420c84df1548f2f0a48c",
+    "content-hash": "63d2d70e23dc7b7f641a699e138e1c41",
     "packages": [
         {
             "name": "adbario/php-dot-notation",
@@ -5423,7 +5423,7 @@
             "dist": {
                 "type": "path",
                 "url": "./package/tool",
-                "reference": "6f5c9606aa8ee6b4599abeb16f7f3cb831e95c2c"
+                "reference": "59f8c025ab60a14b81a8bb28ddfd0e9072894ca3"
             },
             "require": {
                 "aliyuncs/oss-sdk-php": "^2.4",
@@ -9150,6 +9150,72 @@
             "time": "2020-11-12T00:07:28+00:00"
         },
         {
+            "name": "wangju/ding-notice",
+            "version": "1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wowiwj/ding-notice.git",
+                "reference": "a5392c649e94209af261df17706130b1f5c640c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wowiwj/ding-notice/zipball/a5392c649e94209af261df17706130b1f5c640c9",
+                "reference": "a5392c649e94209af261df17706130b1f5c640c9",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2|^7.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.2",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DingNotice\\DingNoticeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DingNotice\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "王举",
+                    "email": "35649084@qq.com"
+                }
+            ],
+            "description": "a dingtalk robot message handle for send message",
+            "keywords": [
+                "ding notice",
+                "ding talk",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/wowiwj/ding-notice/issues",
+                "source": "https://github.com/wowiwj/ding-notice/tree/1.0.10"
+            },
+            "time": "2020-11-05T01:31:09+00:00"
+        },
+        {
             "name": "webmozart/assert",
             "version": "1.10.0",
             "source": {
@@ -9345,6 +9411,56 @@
                 }
             ],
             "time": "2021-04-09T07:25:03+00:00"
+        },
+        {
+            "name": "wujunze/dingtalk-exception",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wujunze/dingtalk-exception.git",
+                "reference": "d1584419f2273b3aacfd1e7c309b97bf811e9ba8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wujunze/dingtalk-exception/zipball/d1584419f2273b3aacfd1e7c309b97bf811e9ba8",
+                "reference": "d1584419f2273b3aacfd1e7c309b97bf811e9ba8",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "wangju/ding-notice": "^1.0"
+            },
+            "require-dev": {
+                "laravel/framework": "^5.6",
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wujunze\\DingTalkException\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "wujunze",
+                    "email": "itwujunze@163.com"
+                }
+            ],
+            "description": "Laravel exception notify through DingTalk",
+            "support": {
+                "issues": "https://github.com/wujunze/dingtalk-exception/issues",
+                "source": "https://github.com/wujunze/dingtalk-exception/tree/master"
+            },
+            "time": "2018-07-27T11:17:42+00:00"
         }
     ],
     "packages-dev": [

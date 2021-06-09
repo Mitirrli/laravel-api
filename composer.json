@@ -31,7 +31,8 @@
         "thecodingmachine/phpstan-safe-rule": "^1.0",
         "tymon/jwt-auth": "dev-develop",
         "werk365/etagconditionals": "^1.2",
-        "wikimedia/composer-merge-plugin": "dev-master"
+        "wikimedia/composer-merge-plugin": "dev-master",
+        "wujunze/dingtalk-exception": "^1.1"
     },
     "require-dev": {
         "doctrine/dbal": "^3.1",

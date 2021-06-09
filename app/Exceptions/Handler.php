@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Http\Response;
 use Illuminate\Validation\ValidationException;
+use Wujunze\DingTalkException\DingTalkExceptionHelper;
 
 class Handler extends ExceptionHandler
 {
@@ -60,6 +61,9 @@ class Handler extends ExceptionHandler
 
             return new Response($firstError[0], 422);
         }
+
+        // 通知到钉钉
+        DingTalkExceptionHelper::notify($e);
 
         return new Response('', 500);
     }
