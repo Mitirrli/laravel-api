@@ -14,6 +14,18 @@ git log
 git rebase -i SHA1 SHA1
 ```
 
+### 如果有错误可以回退
+
+```
+git rebase --abort
+```
+
+### 将 master 分支指向当前头指针的位置
+
+```
+git branch -f master HEAD
+```
+
 ### 合并到原分支
 
 ```
