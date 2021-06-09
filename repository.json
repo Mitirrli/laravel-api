@@ -1,0 +1,11 @@
+{
+    "require": {
+        "qjdata/tool": "dev-master"
+    },
+    "repositories": {
+        "qjdata/tool": {
+            "type": "vcs",
+            "url": "http://git.quanjingshuju.com/yaoxiebang2/tool.git"
+        }
+    }
+}

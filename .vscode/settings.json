@@ -64,6 +64,7 @@
         "phpstan",
         "phpunit",
         "predis",
+        "qjdata",
         "regeo",
         "regeocode",
         "rewrite",
