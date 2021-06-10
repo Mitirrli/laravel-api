@@ -17,7 +17,7 @@ pipeline {
                     cp -f ".env.${gitlabBranch}" .env
                 """
 
-                echo "安装依赖 composer"
+                echo "安装 依赖"
                 sh """
                     docker exec laravel-api composer i
                 """
