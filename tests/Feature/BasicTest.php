@@ -28,4 +28,15 @@ class BasicTest extends TestCase
 
         $response->assertStatus(500);
     }
+
+    public function testEtag()
+    {
+        $response = $this->get('/demo/list');
+
+        $response->assertStatus(200);
+
+        $response = $this->get('/demo/list', ['If-None-Match' => $response->headers->get('etag')]);
+
+        $response->assertStatus(304);
+    }
 }

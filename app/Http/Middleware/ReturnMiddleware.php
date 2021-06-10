@@ -18,10 +18,11 @@ class ReturnMiddleware
             return $response;
         }
 
+        // JsonResponse 需要带上 header
         if (\array_key_exists('data', $data = $response->getData('data'))) {
-            return \response()->json(\array_merge(['code' => 0], $data));
+            return \response()->json(\array_merge(['code' => 0], $data), headers: $response->headers->all());
         }
 
-        return \response()->json(['code' => 0, 'data' => $data]);
+        return \response()->json(['code' => 0, 'data' => $data], headers: $response->headers->all());
     }
 }
