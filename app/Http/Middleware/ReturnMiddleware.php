@@ -3,18 +3,18 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Http\JsonResponse;
 
 class ReturnMiddleware
 {
-    public function handle(Request $request, Closure $next): JsonResponse|Response
+    public function handle(Request $request, Closure $next): JsonResponse | Response
     {
         $response = $next($request);
 
         // 异常 或 状态码不为 200 则继续传递到下层
-        if ($response->exception || $response->getStatusCode() !== 200) {
+        if ($response->exception || 200 !== $response->getStatusCode()) {
             return $response;
         }
 
