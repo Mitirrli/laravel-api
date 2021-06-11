@@ -65,6 +65,11 @@ class Handler extends ExceptionHandler
         // 通知到钉钉
         DingTalkExceptionHelper::notify($e);
 
-        return new Response('', 500);
+        // 如果是测试环境直接将报错显示出来
+        if (\config('app.debug')) {
+            $error = $e->__toString();
+        }
+
+        return new Response($error ?? '', 500);
     }
 }
