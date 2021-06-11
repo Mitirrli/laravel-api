@@ -30,7 +30,7 @@ composer update-project
 
 #### 启动项目
 
-##### fpm
+cli
 
 ```bash
 composer serve

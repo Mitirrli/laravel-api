@@ -3,7 +3,6 @@
 /node_modules
 /stubs
 /tests
-.docker
 .git
 .github
 .vscode
