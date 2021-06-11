@@ -1,11 +1,16 @@
 {
     "require": {
-        "qjdata/tool": "dev-master"
+        "qjdata/tool": "dev-master",
+        "qjdata/user": "dev-master"
     },
     "repositories": {
         "qjdata/tool": {
             "type": "path",
             "url": "./package/tool/"
+        },
+        "qjdata/user": {
+            "type": "path",
+            "url": "./package/user/"
         }
     }
 }

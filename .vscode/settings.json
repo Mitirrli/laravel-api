@@ -21,6 +21,8 @@
         "alibabacloud",
         "aliyuncs",
         "amap",
+        "arrayable",
+        "authenticatable",
         "autoload",
         "autoloaded",
         "autoloader",

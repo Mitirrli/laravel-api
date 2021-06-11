@@ -1,3 +1,6 @@
 [submodule "package/tool"]
 	path = package/tool
 	url = ssh://git@quanjingshuju.com:222/yaoxiebang2/tool.git
+[submodule "package/user"]
+	path = package/user
+	url = ssh://git@quanjingshuju.com:222/yaoxiebang2/user.git
