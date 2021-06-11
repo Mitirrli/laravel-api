@@ -7,7 +7,8 @@ RUN echo http://mirrors.aliyun.com/alpine/v3.12/main > /etc/apk/repositories \
     && echo  http://mirrors.aliyun.com/alpine/v3.12/community >> /etc/apk/repositorie
 
 # 使用xdebug进行调试
-RUN apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
+RUN apk add --no-cache nodejs npm \
+    && apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
     && wget http://pecl.php.net/get/xdebug-${XDEBUG_VERSION}.tgz -O /tmp/xdebug.tar.tgz \
     && pecl install /tmp/xdebug.tar.tgz \
     && rm -rf /tmp/xdebug.tar.tgz \

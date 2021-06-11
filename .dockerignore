@@ -3,6 +3,7 @@
 /node_modules
 /stubs
 /tests
+/doc
 .git
 .github
 .vscode
