@@ -4,7 +4,7 @@ services:
     laravel-api:
         container_name: laravel-api
         build:
-            context: .docker/php
+            context: .docker
             dockerfile: Dockerfile
         ports:
             - 8098:8000
@@ -18,5 +18,5 @@ services:
         image: redis
         command: redis-server --requirepass root:root
         ports:
-            - "6397:6379"
+            - 6397:6379
         restart: always

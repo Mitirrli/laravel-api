@@ -3,7 +3,7 @@
         {
             "name": "php",
             "localPort": 8098,
-            "remotePort": 8098,
+            "remotePort": 8000,
         }
     ],
     "files.autoSave": "onFocusChange",
