@@ -3,7 +3,7 @@ FROM hampster/php-cli-base:${TAG}
 
 LABEL maintainer="Hampster <phper.blue@gmail.com>"
 
-COPY ./docker/base/opcache/* $PHP_INI_DIR/conf.d
+COPY .docker/base/opcache/* $PHP_INI_DIR/conf.d
 
 ADD . .
 
