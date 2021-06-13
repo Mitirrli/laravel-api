@@ -63,7 +63,7 @@ class Handler extends ExceptionHandler
         }
 
         // 非本地调试环境 通知到钉钉
-        if (\config('app.env') !== 'local') {
+        if ('local' !== \config('app.env')) {
             DingTalkExceptionHelper::notify($e);
         }
 
