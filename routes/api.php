@@ -11,8 +11,20 @@
 |
 */
 
-Route::post('/demo', ['App\Http\Controllers\DemoController', 'save'])->name('保存demo');
-Route::get('/demo/list', ['App\Http\Controllers\DemoController', 'list'])->middleware('etag')->name('列表demo');
+use Illuminate\Support\Str;
+
+Route::name('demo.')->prefix('demo')->group(function () {
+    Route::post('/', ['App\Http\Controllers\DemoController', 'save'])->name('保存');
+    Route::get('list', ['App\Http\Controllers\DemoController', 'list'])->middleware('etag')->name('列表');
+});
+
+Route::name('backend.')->prefix('test')->group(function () {
+    Route::get('/', function () {
+        Artisan::call('route:list --name="backend." --columns=name,uri --json');
+
+        return response()->json(json_decode(Str::of(Artisan::output())->replace('backend.', ''), true));
+    })->name('测试 artisan');
+});
 
 Route::fallback(function () {
     return new \Illuminate\Http\Response('', 404);
