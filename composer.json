@@ -89,7 +89,9 @@
             "cghooks update"
         ],
         "update-project": [
-            "@git pull",
+            "git pull",
+            "git submodule init",
+            "git submodule update",
             "@php artisan route:clear",
             "@php artisan ide-helper:models -N",
             "@php artisan ide-helper:generate",

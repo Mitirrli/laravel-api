@@ -62,8 +62,10 @@ class Handler extends ExceptionHandler
             return new Response($firstError[0], 422);
         }
 
-        // 通知到钉钉
-        DingTalkExceptionHelper::notify($e);
+        // 非本地调试环境 通知到钉钉
+        if (\config('app.env') !== 'local') {
+            DingTalkExceptionHelper::notify($e);
+        }
 
         // 如果是测试环境直接将报错显示出来
         if (\config('app.debug')) {

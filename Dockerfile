@@ -1,4 +1,4 @@
-ARG TAG=0.0.1
+ARG TAG=0.0.2
 FROM hampster/php-cli-base:${TAG}
 
 LABEL maintainer="Hampster <phper.blue@gmail.com>"
