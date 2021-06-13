@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\DemoRequest;
 use App\Models\Demo;
 
-class DemoController extends Controller
+class Demos extends Controller
 {
     protected Demo $demo;
 

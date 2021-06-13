@@ -11,13 +11,16 @@
 |
 */
 
-use App\Http\Controllers\Test\ExceptionController;
+Route::name('test.')->prefix('test')->group(function () {
+    Route::get('business', App\Http\Controllers\Business::class)->name('业务异常');
+    Route::get('system', App\Http\Controllers\System::class)->name('系统异常');
+    Route::get('route', App\Http\Controllers\GetRouteList::class)->name('获取路由');
+});
 
-Route::get('test/business', [ExceptionController::class, 'business'])->name('TEST: business异常');
-Route::get('test/system', [ExceptionController::class, 'system'])->name('TEST: 系统异常');
-
-Route::post('/demo', ['App\Http\Controllers\DemoController', 'save'])->name('保存demo');
-Route::get('/demo/list', ['App\Http\Controllers\DemoController', 'list'])->middleware('etag')->name('列表demo');
+Route::name('demo.')->prefix('demo')->group(function () {
+    Route::post('/', ['App\Http\Controllers\Demos', 'save'])->name('保存');
+    Route::get('list', ['App\Http\Controllers\Demos', 'list'])->middleware('etag')->name('列表');
+});
 
 Route::fallback(function () {
     return new \Illuminate\Http\Response('', 404);
