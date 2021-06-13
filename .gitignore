@@ -20,3 +20,5 @@ cghooks.lock
 repository.json
 rr
 supervisord.pid
+deploy.sh
+.docker

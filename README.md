@@ -8,6 +8,16 @@
 composer create-project mitirrli/laravel-api -vvv
 ```
 
+##### 更新子模块
+```bash
+git submodule update
+```
+
+##### 复制部署文件
+```bash
+cp .docker/production/Dockerfile .
+```
+
 ##### 安装需要的包
 
 ```bash
@@ -24,7 +34,7 @@ docker-compose up --build -d
 
 #### 更新项目
 
-```
+```bash
 composer update-project
 ```
 
