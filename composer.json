@@ -25,6 +25,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "jenssegers/agent": "^2.6",
         "laravel/framework": "^8.40",
+        "laravel/horizon": "^5.7",
         "laravel/octane": "^1.0",
         "laravel/scout": "^9.1",
         "matchish/laravel-scout-elasticsearch": "^5.0",
@@ -81,7 +82,8 @@
         "post-update-cmd": [
             "cghooks update",
             "@php artisan ide-helper:generate",
-            "@php artisan ide-helper:meta"
+            "@php artisan ide-helper:meta",
+            "@php artisan horizon:publish --ansi"
         ],
         "post-merge": "composer install",
         "post-install-cmd": [
