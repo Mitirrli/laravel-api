@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Gate;
 use Laravel\Horizon\Horizon;
 use Laravel\Horizon\HorizonApplicationServiceProvider;
 
@@ -17,8 +16,8 @@ class HorizonServiceProvider extends HorizonApplicationServiceProvider
     {
         parent::boot();
 
-        Horizon::auth(function ($request) {
-            return false;
+        Horizon::auth(function () {
+            return true;
         });
 
         // Horizon::routeSmsNotificationsTo('15556667777');
