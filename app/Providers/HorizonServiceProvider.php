@@ -16,7 +16,7 @@ class HorizonServiceProvider extends HorizonApplicationServiceProvider
     {
         parent::boot();
 
-        Horizon::auth(function () {
+        Horizon::auth(function ($request) {
             return true;
         });
 
