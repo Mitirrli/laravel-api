@@ -1,14 +1,15 @@
-FROM registry.cn-hangzhou.aliyuncs.com/back-code/php8-cli:latest
+ARG TAG=0.0.2
+FROM hampster/php-cli-base:${TAG}
 
 LABEL maintainer="Hampster <phper.blue@gmail.com>"
 
-WORKDIR /www
+COPY .docker/base/opcache/* $PHP_INI_DIR/conf.d
 
 ADD . .
 
 RUN composer deploy
 
-COPY .docker/ini/99_default.ini $PHP_INI_DIR/conf.d/
-COPY .docker/ini/99_opcache.ini $PHP_INI_DIR/conf.d/
+ADD supervisord.conf /etc/
 
-ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/www/supervisord.conf"]
+ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
+

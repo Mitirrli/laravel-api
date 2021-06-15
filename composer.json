@@ -20,16 +20,17 @@
         "barryvdh/laravel-ide-helper": "^2.10",
         "brainmaestro/composer-git-hooks": "^2.8",
         "fideloper/proxy": "^4.4",
+        "firebase/php-jwt": "^5.3",
         "fruitcake/laravel-cors": "^2.0",
         "genealabs/laravel-model-caching": "^0.11.3",
         "guzzlehttp/guzzle": "^7.0.1",
         "jenssegers/agent": "^2.6",
         "laravel/framework": "^8.40",
+        "laravel/horizon": "^5.7",
         "laravel/octane": "^1.0",
         "laravel/scout": "^9.1",
         "matchish/laravel-scout-elasticsearch": "^5.0",
         "thecodingmachine/phpstan-safe-rule": "^1.0",
-        "tymon/jwt-auth": "dev-develop",
         "werk365/etagconditionals": "^1.2",
         "wikimedia/composer-merge-plugin": "dev-master",
         "wujunze/dingtalk-exception": "^1.1"
@@ -53,7 +54,7 @@
     },
     "suggest": {
         "ext-redis": "For better performance. ",
-        "monolog/monolog": "Allows more advanced logging of the application flow"
+        "monolog/monolog": "Allows more advanced logging of the application flow. "
     },
     "autoload": {
         "psr-4": {
@@ -81,7 +82,8 @@
         "post-update-cmd": [
             "cghooks update",
             "@php artisan ide-helper:generate",
-            "@php artisan ide-helper:meta"
+            "@php artisan ide-helper:meta",
+            "@php artisan horizon:publish --ansi"
         ],
         "post-merge": "composer install",
         "post-install-cmd": [
@@ -89,7 +91,9 @@
             "cghooks update"
         ],
         "update-project": [
-            "@git pull",
+            "git pull",
+            "git submodule init",
+            "git submodule update",
             "@php artisan route:clear",
             "@php artisan ide-helper:models -N",
             "@php artisan ide-helper:generate",

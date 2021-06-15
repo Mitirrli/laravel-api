@@ -37,6 +37,12 @@ class Handler extends ExceptionHandler
      */
     public function register(): void
     {
+        $this->reportable(function (\Throwable $e): void {
+            // 非本地调试环境 通知到钉钉
+            if ('local' !== \config('app.env')) {
+                DingTalkExceptionHelper::notify($e);
+            }
+        });
     }
 
     /**
@@ -51,10 +57,6 @@ class Handler extends ExceptionHandler
      */
     public function render($request, \Throwable $e): \Symfony\Component\HttpFoundation\Response
     {
-        if ($e instanceof BusinessException) {
-            return new Response(['code' => $e->getCode(), 'message' => $e->getMessage()]);
-        }
-
         if ($e instanceof ValidationException) {
             $errors = $e->errors();
             $firstError = \reset($errors);
@@ -62,14 +64,6 @@ class Handler extends ExceptionHandler
             return new Response($firstError[0], 422);
         }
 
-        // 通知到钉钉
-        DingTalkExceptionHelper::notify($e);
-
-        // 如果是测试环境直接将报错显示出来
-        if (\config('app.debug')) {
-            $error = $e->__toString();
-        }
-
-        return new Response($error ?? '', 500);
+        return parent::render($request, $e);
     }
 }

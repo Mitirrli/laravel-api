@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\DemoRequest;
+use App\Jobs\DemoTest;
 use App\Models\Demo;
+use Carbon\Carbon;
 
-class DemoController extends Controller
+class Demos extends Controller
 {
     protected Demo $demo;
 
@@ -21,6 +23,8 @@ class DemoController extends Controller
 
     public function list()
     {
+        // DemoTest::dispatch()->delay(Carbon::now()->addMinutes(10));;
+
         return $this->demo->first();
     }
 }
