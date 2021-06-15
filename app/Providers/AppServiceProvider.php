@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -34,5 +35,14 @@ class AppServiceProvider extends ServiceProvider
             //预防 N+1 问题
             Model::preventLazyLoading(!\app()->isProduction());
         }
+
+        //统一的返回
+        Response::macro('output', function (int $code = 0, string $message = 'ok', $data = []) {
+            return \response()->json([
+        'code' => $code,
+        'message' => $message,
+        'data' => $data,
+      ], options: \JSON_UNESCAPED_UNICODE | \JSON_UNESCAPED_SLASHES);
+        });
     }
 }

@@ -107,7 +107,7 @@
     "cghooks": "vendor/bin/cghooks",
     "check-style": "docker exec laravel-api vendor/bin/php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi",
     "cs-fix": "docker exec laravel-api vendor/bin/php-cs-fixer fix --using-cache=no --config=.php_cs --ansi",
-    "test": "docker exec laravel-api vendor/bin/phpunit --colors=always --testdox",
+    "test": "docker exec laravel-api vendor/bin/phpunit --colors=always --testdox -vvv",
     "stan": "docker exec laravel-api vendor/bin/phpstan analyse -c phpstan.neon --memory-limit=2G --verbose",
     "psalm": "docker exec laravel-api vendor/bin/psalm --show-info=true"
   },
