@@ -20,6 +20,7 @@
         "barryvdh/laravel-ide-helper": "^2.10",
         "brainmaestro/composer-git-hooks": "^2.8",
         "fideloper/proxy": "^4.4",
+        "firebase/php-jwt": "^5.3",
         "fruitcake/laravel-cors": "^2.0",
         "genealabs/laravel-model-caching": "^0.11.3",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -30,7 +31,6 @@
         "laravel/scout": "^9.1",
         "matchish/laravel-scout-elasticsearch": "^5.0",
         "thecodingmachine/phpstan-safe-rule": "^1.0",
-        "tymon/jwt-auth": "dev-develop",
         "werk365/etagconditionals": "^1.2",
         "wikimedia/composer-merge-plugin": "dev-master",
         "wujunze/dingtalk-exception": "^1.1"
@@ -54,7 +54,7 @@
     },
     "suggest": {
         "ext-redis": "For better performance. ",
-        "monolog/monolog": "Allows more advanced logging of the application flow"
+        "monolog/monolog": "Allows more advanced logging of the application flow. "
     },
     "autoload": {
         "psr-4": {
