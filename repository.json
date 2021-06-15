@@ -2,7 +2,7 @@
   "require": {
     "qjdata/tool": "dev-master",
     "qjdata/user": "dev-master",
-    "qjdata/news": "dev-develop"
+    "qjdata/news": "dev-master"
   },
   "repositories": {
     "qjdata/tool": {
