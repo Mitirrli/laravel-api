@@ -1,16 +1,21 @@
 {
-    "require": {
-        "qjdata/tool": "dev-master",
-        "qjdata/user": "dev-master"
+  "require": {
+    "qjdata/tool": "dev-master",
+    "qjdata/user": "dev-master",
+    "qjdata/news": "dev-develop"
+  },
+  "repositories": {
+    "qjdata/tool": {
+      "type": "path",
+      "url": "./package/tool/"
     },
-    "repositories": {
-        "qjdata/tool": {
-            "type": "path",
-            "url": "./package/tool/"
-        },
-        "qjdata/user": {
-            "type": "path",
-            "url": "./package/user/"
-        }
+    "qjdata/user": {
+      "type": "path",
+      "url": "./package/user/"
+    },
+    "qjdata/news": {
+      "type": "path",
+      "url": "./package/news/"
     }
+  }
 }

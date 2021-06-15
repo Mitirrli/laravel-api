@@ -17,6 +17,11 @@ pipeline {
                     cp -f ".env.${gitlabBranch}" .env
                 """
 
+                echo "数据迁移"
+                sh """
+                  php artisan migrate
+                """
+
                 echo "安装 依赖"
                 sh """
                     docker exec laravel-api composer i

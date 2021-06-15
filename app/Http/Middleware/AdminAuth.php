@@ -5,9 +5,9 @@ namespace App\Http\Middleware;
 use Closure;
 use Firebase\JWT\JWT;
 use Illuminate\Http\Request;
-use Qjdata\User\Models\User;
+use App\Http\Admin\Models\User;
 
-class ApiAuth
+class AdminAuth
 {
   public string $token = '';
   private static object $payLoad;

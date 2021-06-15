@@ -5424,6 +5424,41 @@
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
+            "name": "qjdata/news",
+            "version": "dev-develop",
+            "dist": {
+                "type": "path",
+                "url": "./package/news",
+                "reference": "fedff84725f85a18d48a2867bfcdb576283b176e"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Qjdata\\News\\Provider\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Qjdata\\News\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "huanglei",
+                    "email": "huanglei@quanjingshuju.com"
+                }
+            ],
+            "description": "资讯类",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "qjdata/tool",
             "version": "dev-master",
             "dist": {
@@ -13615,7 +13650,8 @@
     "stability-flags": {
         "wikimedia/composer-merge-plugin": 20,
         "qjdata/tool": 20,
-        "qjdata/user": 20
+        "qjdata/user": 20,
+        "qjdata/news": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
