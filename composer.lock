@@ -5465,28 +5465,24 @@
             "dist": {
                 "type": "path",
                 "url": "./package/user",
-                "reference": "e729e80296c703d6b79f84853a6b7fb0de19b298"
+                "reference": "d4b09dd52aa06c09ddfa98a79a9a4feb843d1927"
             },
             "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Qjdata\\User\\Provider\\ServiceProvider"
-                    ]
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Qjdata\\User\\": "./src"
+                    "Qjdata\\User\\": "src"
                 }
             },
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "huanglei",
                     "email": "huanglei@quanjingshuju.com"
                 }
             ],
-            "description": "用户类",
+            "description": "用户模块",
             "transport-options": {
                 "relative": true
             }
