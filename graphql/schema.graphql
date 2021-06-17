@@ -1,0 +1,31 @@
+"A date string with format `Y-m-d`, e.g. `2011-05-23`."
+scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
+
+"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
+scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+type Query {
+    "获取资讯详情"
+    new(id: ID! @eq): News @find
+    "获取资讯列表"
+    news: [News!]! @all
+    "获取资讯标签列表"
+    tags: [NewsTag!]! @all
+}
+
+type News {
+  id: ID!
+  title: String!
+  title_img: String!
+  description: String!
+  content: String!
+  tag: NewsTag @belongsTo
+  top_time: Int!
+  create_time: Int!
+}
+
+type NewsTag {
+  id: ID!
+  name: String!
+  news: [News!]! @hasMany
+}

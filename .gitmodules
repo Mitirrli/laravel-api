@@ -10,3 +10,6 @@
 [submodule "package/news"]
 	path = package/news
 	url = ssh://git@quanjingshuju.com:222/yaoxiebang2/news.git
+[submodule "package/admin"]
+	path = package/admin
+	url = ssh://git@quanjingshuju.com:222/yaoxiebang2/admin.git

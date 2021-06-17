@@ -1,4 +1,5 @@
 /.idea
+/.docker
 /.history
 /hooks
 /node_modules
@@ -14,7 +15,7 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-_ide_helper*
+*_ide_helper*
 .phpstorm.meta.php
 cghooks.lock
 supervisord.pid
