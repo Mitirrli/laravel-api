@@ -4,7 +4,6 @@ $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__ . '/app')
     ->in(__DIR__ . '/package')
     ->exclude('vendor')
-    ->notPath('#/Fixtures/#')
     ->append([
         __DIR__.'/dev-tools/doc.php',
     ])
