@@ -8,7 +8,7 @@ type Query {
     "获取资讯详情"
     new(id: ID! @eq): News @find
     "获取资讯列表"
-    news: [News!]! @all
+    news: [News!]! @paginate
     "获取资讯标签列表"
     tags: [NewsTag!]! @all
 }

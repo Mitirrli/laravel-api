@@ -9,9 +9,9 @@ class Paginator extends LengthAwarePaginator
     public function toArray()
     {
         return [
-      'data' => $this->items->toArray(),
-      'page' => $this->currentPage(),
-      'total_num' => $this->total(),
-    ];
+            'data' => $this->items->toArray(),
+            'page' => $this->currentPage(),
+            'total_num' => $this->total(),
+        ];
     }
 }

@@ -16,6 +16,7 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 *_ide_helper*
+programmatic-types.graphql
 .phpstorm.meta.php
 cghooks.lock
 supervisord.pid
