@@ -17,6 +17,7 @@ npm-debug.log
 yarn-error.log
 *_ide_helper*
 programmatic-types.graphql
+schema-directives.graphq
 .phpstorm.meta.php
 cghooks.lock
 supervisord.pid
