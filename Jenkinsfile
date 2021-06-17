@@ -19,7 +19,7 @@ pipeline {
 
                 echo "数据迁移"
                 sh """
-                  php artisan migrate
+                    php artisan migrate
                 """
 
                 echo "安装 依赖"
@@ -49,10 +49,10 @@ pipeline {
             steps {
                 sh """
                     curl -X PATCH \
-      -H "content-type: application/strategic-merge-patch+json" \
-      -H "Authorization:Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ind0cXJSSjRBRlA1NGRSQXJxWlR1dWRMdUJ5Mms5ZUVleGJYZGFUSTBaUlkifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlLXN5c3RlbSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJrdWJvYXJkLXVzZXItdG9rZW4tcWgyd2wiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoia3Vib2FyZC11c2VyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiMjUwNDkxYTItZmU0YS00MDZjLTk3YWQtMDNlNjcwYzU0MWFmIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50Omt1YmUtc3lzdGVtOmt1Ym9hcmQtdXNlciJ9.sSkH49Roo7cnYtwcS4_9XI-17m3cdiheB7QnoojhOMjKMmrqXd8RNe_M-o4da_M69pdAHzrLq91qacjlleOWv5-dtwrNxbYd8ZFAGQlHVTVy7mPalaysq2ngzNQrSSsboVCMNhtXrG8xdJJwBQVv2UJAnimH90WU2YOOlf0h_2o8bDi_OpBCcN-okTdK2qWkpjKQd4hWIBkpi-0-RC3vnNITtUrazLIQUyeq-qZOuJnTbMkHx3rz6apGbAQar13WaBL-HHM3GdjFjlm5vULEdzRTKkwIbnHY6KZ8ngz32upfxdBpb004PP3Lhu7hhbztt5UUVHRgBK1lMJb0AJ_4gQ" \
-      -d '{"spec":{"template":{"spec":{"containers":[{"name":"code","image":"registry-vpc.cn-hangzhou.aliyuncs.com/back-code/yxb2:${commitTag}"}]}}}}' \
-      "http://47.111.234.205:32567/k8s-api/apis/apps/v1/namespaces/back-code/deployments/yxb2-${gitlabBranch}"
+                        -H "content-type: application/strategic-merge-patch+json" \
+                        -H "Authorization:Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ind0cXJSSjRBRlA1NGRSQXJxWlR1dWRMdUJ5Mms5ZUVleGJYZGFUSTBaUlkifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlLXN5c3RlbSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJrdWJvYXJkLXVzZXItdG9rZW4tcWgyd2wiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoia3Vib2FyZC11c2VyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiMjUwNDkxYTItZmU0YS00MDZjLTk3YWQtMDNlNjcwYzU0MWFmIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50Omt1YmUtc3lzdGVtOmt1Ym9hcmQtdXNlciJ9.sSkH49Roo7cnYtwcS4_9XI-17m3cdiheB7QnoojhOMjKMmrqXd8RNe_M-o4da_M69pdAHzrLq91qacjlleOWv5-dtwrNxbYd8ZFAGQlHVTVy7mPalaysq2ngzNQrSSsboVCMNhtXrG8xdJJwBQVv2UJAnimH90WU2YOOlf0h_2o8bDi_OpBCcN-okTdK2qWkpjKQd4hWIBkpi-0-RC3vnNITtUrazLIQUyeq-qZOuJnTbMkHx3rz6apGbAQar13WaBL-HHM3GdjFjlm5vULEdzRTKkwIbnHY6KZ8ngz32upfxdBpb004PP3Lhu7hhbztt5UUVHRgBK1lMJb0AJ_4gQ" \
+                        -d '{"spec":{"template":{"spec":{"containers":[{"name":"code","image":"registry-vpc.cn-hangzhou.aliyuncs.com/back-code/yxb2:${commitTag}"}]}}}}' \
+                        "http://47.111.234.205:32567/k8s-api/apis/apps/v1/namespaces/back-code/deployments/yxb2-${gitlabBranch}"
                 """
             }
         }
