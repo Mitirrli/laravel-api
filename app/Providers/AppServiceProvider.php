@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
         }
 
         $this->app->bind('Illuminate\Pagination\LengthAwarePaginator', function ($app, $options) {
-            return (new \App\Tool\Paginator($options['items'], $options['total'], $options['perPage'], $options['currentPage'], $options['options']));
+            return new \App\Tool\Paginator($options['items'], $options['total'], $options['perPage'], $options['currentPage'], $options['options']);
         });
     }
 
