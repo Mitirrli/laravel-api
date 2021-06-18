@@ -30,7 +30,7 @@ composer update-project
 
 #### 启动项目
 
-cli
+##### cli
 
 ```bash
 composer serve
@@ -40,6 +40,14 @@ composer serve
 
 ```
 composer octane
+```
+
+#### 模型缓存
+
+##### 清除指定模型的缓存
+
+```
+php artisan modelCache:clear --model=App\Model
 ```
 
 ### 调试
