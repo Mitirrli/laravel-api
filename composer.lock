@@ -158,16 +158,16 @@
         },
         {
             "name": "alibabacloud/sdk",
-            "version": "1.8.1025",
+            "version": "1.8.1026",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aliyun/openapi-sdk-php.git",
-                "reference": "cbc31577cc65d395ca9d986d8be7c85ef0d983e1"
+                "reference": "aa4afb59c13c37b670b332bc5e6433d9fd8762a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aliyun/openapi-sdk-php/zipball/cbc31577cc65d395ca9d986d8be7c85ef0d983e1",
-                "reference": "cbc31577cc65d395ca9d986d8be7c85ef0d983e1",
+                "url": "https://api.github.com/repos/aliyun/openapi-sdk-php/zipball/aa4afb59c13c37b670b332bc5e6433d9fd8762a9",
+                "reference": "aa4afb59c13c37b670b332bc5e6433d9fd8762a9",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -398,7 +398,7 @@
                 "issues": "https://github.com/aliyun/openapi-sdk-php/issues",
                 "source": "https://github.com/aliyun/openapi-sdk-php"
             },
-            "time": "2021-06-17T02:41:12+00:00"
+            "time": "2021-06-18T02:48:40+00:00"
         },
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -5268,16 +5268,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.89",
+            "version": "0.12.90",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "54c0f5a6c30511b77128d58b6369f718df250542"
+                "reference": "f0e4b56630fc3d4eb5be86606d07212ac212ede4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/54c0f5a6c30511b77128d58b6369f718df250542",
-                "reference": "54c0f5a6c30511b77128d58b6369f718df250542",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f0e4b56630fc3d4eb5be86606d07212ac212ede4",
+                "reference": "f0e4b56630fc3d4eb5be86606d07212ac212ede4",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5314,7 +5314,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/0.12.89"
+                "source": "https://github.com/phpstan/phpstan/tree/0.12.90"
             },
             "funding": [
                 {
@@ -5334,7 +5334,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-09T20:23:49+00:00"
+            "time": "2021-06-18T07:15:38+00:00"
         },
         {
             "name": "psr/container",
