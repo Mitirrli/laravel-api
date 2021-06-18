@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Laravel\Scout\ScoutServiceProvider::class,
         Matchish\ScoutElasticSearch\ElasticSearchServiceProvider::class,
 
         /*

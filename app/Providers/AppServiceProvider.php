@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register(\NunoMaduro\Collision\Adapters\Laravel\CollisionServiceProvider::class);
             $this->app->register(\Facade\Ignition\IgnitionServiceProvider::class);
         }
+
+        $this->app->bind('Illuminate\Pagination\LengthAwarePaginator', function ($app, $options) {
+            return (new \App\Tool\Paginator($options['items'], $options['total'], $options['perPage'], $options['currentPage'], $options['options']));
+        });
     }
 
     /**
