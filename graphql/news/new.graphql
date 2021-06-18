@@ -1,0 +1,10 @@
+type News {
+    id: ID!
+    title: String!
+    title_img: String!
+    description: String!
+    content: String!
+    tag: NewsTag @belongsTo
+    top_time: Int!
+    create_time: Int!
+}
