@@ -12,13 +12,9 @@ pipeline {
                     git submodule init && git submodule update
                 """
 
-                echo "拉取 环境变量"
+                echo "拉取 环境变量 && 安装 依赖"
                 sh """
                     cp -f ".env.${gitlabBranch}" .env
-                """
-
-                echo "安装 依赖"
-                sh """
                     composer i --ignore-platform-reqs
                 """
 
