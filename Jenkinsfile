@@ -12,13 +12,17 @@ pipeline {
                     git submodule init && git submodule update
                 """
 
-                echo "拉取 环境变量 && 安装 依赖"
+                echo "拉取 环境变量"
                 sh """
                     cp -f ".env.${gitlabBranch}" .env
+                """
+
+                echo "安装 依赖"
+                sh """
                     composer i --ignore-platform-reqs
                 """
 
-                echo "数据迁移"
+                echo "数据 迁移"
                 sh """
                     php artisan migrate
                 """
