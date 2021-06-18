@@ -30,6 +30,7 @@
         "laravel/octane": "^1.0",
         "laravel/scout": "^9.1",
         "matchish/laravel-scout-elasticsearch": "^5.0",
+        "mll-lab/laravel-graphql-playground": "^2.5",
         "nuwave/lighthouse": "^5.12",
         "thecodingmachine/phpstan-safe-rule": "^1.0",
         "werk365/etagconditionals": "^1.2",
