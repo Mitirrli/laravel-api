@@ -10,7 +10,6 @@ class Paginator extends LengthAwarePaginator
     {
         return [
             'data' => $this->items->toArray(),
-            'page' => $this->currentPage(),
             'total_num' => $this->total(),
         ];
     }
