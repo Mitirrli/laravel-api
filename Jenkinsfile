@@ -19,8 +19,7 @@ pipeline {
 
                 echo "安装 依赖"
                 sh """
-                    docker exec laravel-api composer i
-                    docker exec laravel-api composer dump-autoload -o
+                    composer i --ignore-platform-reqs
                 """
 
                 echo "数据迁移"
