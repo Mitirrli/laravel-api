@@ -1,26 +1,26 @@
 {
-  "require": {
-    "qjdata/tool": "dev-master",
-    "qjdata/user": "dev-master",
-    "qjdata/news": "dev-master",
-    "qjdata/admin": "dev-master"
-  },
-  "repositories": {
-    "qjdata/tool": {
-      "type": "path",
-      "url": "./package/tool/"
+    "require": {
+        "qjdata/tool": "dev-master",
+        "qjdata/user": "dev-master",
+        "qjdata/news": "dev-master",
+        "qjdata/admin": "dev-master"
     },
-    "qjdata/user": {
-      "type": "path",
-      "url": "./package/user/"
-    },
-    "qjdata/news": {
-      "type": "path",
-      "url": "./package/news/"
-    },
-    "qjdata/admin": {
-      "type": "path",
-      "url": "./package/admin/"
+    "repositories": {
+        "qjdata/tool": {
+            "type": "path",
+            "url": "./package/tool/"
+        },
+        "qjdata/user": {
+            "type": "path",
+            "url": "./package/user/"
+        },
+        "qjdata/news": {
+            "type": "path",
+            "url": "./package/news/"
+        },
+        "qjdata/admin": {
+            "type": "path",
+            "url": "./package/admin/"
+        }
     }
-  }
 }
