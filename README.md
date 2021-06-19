@@ -30,13 +30,9 @@ composer update-project
 
 #### 启动项目
 
-##### cli
-
 ```bash
 composer serve
 ```
-
-##### octane
 
 ```
 composer octane
@@ -64,7 +60,7 @@ php tool/phploc.phar app package
 
 ### 调试
 
-#### 使用 telescope 进行调试 ( /telescope )
+#### 使用 telescope 进行调试
 
 #### 使用 tinker 进行调试
 ```
