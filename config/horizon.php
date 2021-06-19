@@ -151,7 +151,7 @@ return [
     |
     */
 
-    'memory_limit' => 64,
+    'memory_limit' => 128,
 
     /*
     |--------------------------------------------------------------------------
@@ -177,7 +177,20 @@ return [
     ],
 
     'environments' => [
-        'production' => [
+        'alpha' => [
+            'supervisor-1' => [
+                'connection' => 'redis',
+                'queue' => ['default'],
+                'balance' => 'auto',
+                'minProcesses' => 1,
+                'maxProcesses' => 10,
+                'balanceMaxShift' => 1,
+                'balanceCooldown' => 3,
+                'tries' => 3,
+            ],
+        ],
+
+        'prod' => [
             'supervisor-1' => [
                 'connection' => 'redis',
                 'queue' => ['default'],

@@ -17,7 +17,13 @@ class HorizonServiceProvider extends HorizonApplicationServiceProvider
         parent::boot();
 
         Horizon::auth(function ($request) {
-            return true;
+            if (\gethostbyname('qjdata.tpddns.cn') === $request->getClientIp()) {
+                return true;
+            }
+
+            if ($this->app->environment('local')) {
+                return true;
+            }
         });
 
         // Horizon::routeSmsNotificationsTo('15556667777');

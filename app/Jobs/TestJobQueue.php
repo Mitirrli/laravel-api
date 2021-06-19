@@ -2,14 +2,16 @@
 
 namespace App\Jobs;
 
+use App\Exceptions\BusinessException;
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Redis;
+use Wujunze\DingTalkException\DingTalkExceptionHelper;
 
-class DemoTest implements ShouldQueue
+class TestJobQueue implements ShouldQueue, ShouldBeUnique
 {
     use Dispatchable;
     use InteractsWithQueue;
@@ -32,6 +34,10 @@ class DemoTest implements ShouldQueue
      */
     public function handle(): void
     {
-        Redis::set('time:' . \time(), \time());
+        try {
+            throw new BusinessException('测试 Queue', 1);
+        } catch (\Exception $e) {
+            DingTalkExceptionHelper::notify($e);
+        }
     }
 }

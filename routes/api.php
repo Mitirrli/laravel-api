@@ -14,6 +14,7 @@
 Route::name('test.')->prefix('test')->group(function () {
     Route::get('business', App\Http\Controllers\Business::class)->name('业务异常');
     Route::get('system', App\Http\Controllers\System::class)->name('系统异常');
+    Route::get('job', App\Http\Controllers\TestJob::class)->name('JOB');
 });
 
 Route::name('demo.')->prefix('demo')->group(function () {
