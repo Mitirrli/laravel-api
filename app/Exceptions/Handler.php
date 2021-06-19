@@ -38,7 +38,7 @@ class Handler extends ExceptionHandler
      */
     public function register(): void
     {
-        $this->reportable(function (\Throwable $e): void {
+        $this->reportable(function (Throwable $e): void {
             // 非本地调试环境 通知到钉钉
             if ('local' !== \config('app.env')) {
                 DingTalkExceptionHelper::notify($e);
@@ -56,14 +56,14 @@ class Handler extends ExceptionHandler
      *
      * @throws \Throwable
      */
-    public function render($request, \Throwable $e): \Symfony\Component\HttpFoundation\Response
+    public function render($request, Throwable $e): \Symfony\Component\HttpFoundation\Response
     {
         if ($e instanceof ValidationException) {
             $errors = $e->errors();
             $firstError = \reset($errors);
 
             // ??兼容模型验证
-            return new Response($firstError[0] ?? array_values($firstError)[0][0], 422);
+            return new Response($firstError[0] ?? \array_values($firstError)[0][0], 422);
         }
 
         return parent::render($request, $e);

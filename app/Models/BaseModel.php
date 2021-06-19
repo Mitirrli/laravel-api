@@ -12,22 +12,10 @@ use Watson\Validating\ValidatingTrait;
 class BaseModel extends Model
 {
     use Cachable;
-
-    /**
-     * Make model validate attributes.
-     *
-     * @see \Watson\Validating\ValidatingTrait
-     */
-    use ValidatingTrait;
-
-    /**
-     * For filter.
-     */
     use Filterable;
-
     use HasFactory;
-
     use SoftDeletes;
+    use ValidatingTrait;
 
     public const CREATED_AT = 'create_time';
     public const UPDATED_AT = 'update_time';
@@ -41,7 +29,7 @@ class BaseModel extends Model
     protected $rules = [];
 
     /**
-     * trait与class属性冲突 使用方法引入
+     * trait与class属性冲突 使用方法引入.
      *
      * 共用的trait需要包含_init方法引入变量
      */
@@ -49,7 +37,7 @@ class BaseModel extends Model
     {
         parent::__construct();
 
-        if (method_exists($this, '_init')) {
+        if (\method_exists($this, '_init')) {
             $this->_init();
         }
     }
