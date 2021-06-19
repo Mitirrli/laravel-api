@@ -33,6 +33,7 @@
         "mll-lab/laravel-graphql-playground": "^2.5",
         "nuwave/lighthouse": "^5.12",
         "thecodingmachine/phpstan-safe-rule": "^1.0",
+        "watson/validating": "^6.1",
         "werk365/etagconditionals": "^1.2",
         "wikimedia/composer-merge-plugin": "dev-master",
         "wujunze/dingtalk-exception": "^1.1"

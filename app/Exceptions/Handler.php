@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Http\Response;
 use Illuminate\Validation\ValidationException;
+use Throwable;
 use Wujunze\DingTalkException\DingTalkExceptionHelper;
 
 class Handler extends ExceptionHandler
@@ -61,7 +62,8 @@ class Handler extends ExceptionHandler
             $errors = $e->errors();
             $firstError = \reset($errors);
 
-            return new Response($firstError[0], 422);
+            // ??兼容模型验证
+            return new Response($firstError[0] ?? array_values($firstError)[0][0], 422);
         }
 
         return parent::render($request, $e);
