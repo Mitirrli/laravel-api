@@ -157,7 +157,7 @@
             ],
             "pre-push": [
                 "composer test",
-                "php tool/phpcpd.phar --fuzzy app",
+                "php tool/phpcpd.phar --fuzzy app package",
                 "php tool/phploc.phar app package"
             ]
         }
