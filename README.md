@@ -64,18 +64,9 @@ php tool/phploc.phar app package
 
 ### 调试
 
-#### telescope
+#### 使用 telescope 进行调试 ( /telescope )
 
-##### 路径
-
-```
-{{url}}/telescope
-```
-
-#### tinker
-
-##### 使用
-
+#### 使用 tinker 进行调试
 ```
 php artisan tinker
 ```
