@@ -2,11 +2,7 @@
 
 ### 本地开发
 
-##### 创建项目
-
-```bash
-composer create-project mitirrli/laravel-api -vvv
-```
+##### 克隆项目
 
 ##### 安装需要的包
 
@@ -49,11 +45,13 @@ php artisan modelCache:clear --model=App\Model
 #### 代码检查
 
 ##### 代码拷贝/粘贴检测
+
 ```
 php tool/phpcpd.phar --fuzzy app
 ```
 
 ##### 计算代码规模和结构
+
 ```
 php tool/phploc.phar app package
 ```
@@ -63,6 +61,7 @@ php tool/phploc.phar app package
 #### 使用 telescope 进行调试
 
 #### 使用 tinker 进行调试
+
 ```
 php artisan tinker
 ```
