@@ -15,6 +15,11 @@
             <directory name="app/Traits" />
             <directory name="app/Http/Controllers" />
             <directory name="app/Http/Middleware" />
+            <file name="app/Models/BaseModel.php" />
         </ignoreFiles>
+    </projectFiles>
+
+    <projectFiles>
+        <directory name="package" />
     </projectFiles>
 </psalm>
