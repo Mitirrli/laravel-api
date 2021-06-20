@@ -19,6 +19,8 @@ pipeline {
 
                 echo "安装 依赖"
                 sh """
+                    export COMPOSER_HOME="$HOME/.config/composer"
+                    
                     composer i --ignore-platform-reqs
                 """
 
