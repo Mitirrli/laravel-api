@@ -4,6 +4,10 @@
 
 ##### 克隆项目
 
+```
+git clone -b develop ssh://git@quanjingshuju.com:222/yaoxiebang2/laravel-api.git
+```
+
 ##### 安装需要的包
 
 ```bash
