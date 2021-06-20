@@ -63,7 +63,7 @@ class Handler extends ExceptionHandler
             $firstError = \reset($errors);
 
             // ??兼容模型验证
-            return new Response($firstError[0] ?? \array_values($firstError)[0][0], 422);
+            return new Response(['message' => $firstError[0] ?? \array_values($firstError)[0][0]], 422);
         }
 
         return parent::render($request, $e);
