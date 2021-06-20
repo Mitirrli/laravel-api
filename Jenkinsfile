@@ -19,9 +19,7 @@ pipeline {
 
                 echo "安装 依赖"
                 sh """
-                    export COMPOSER_HOME="$HOME/.config/composer"
-                    
-                    composer i --ignore-platform-reqs
+                    docker exec laravel-api composer i --ignore-platform-reqs
                 """
 
                 echo "数据 迁移"
