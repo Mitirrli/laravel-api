@@ -24,7 +24,7 @@ pipeline {
 
                 echo "数据 迁移"
                 sh """
-                    php artisan migrate
+                    docker exec laravel-api php artisan migrate
                 """
             }
         }
