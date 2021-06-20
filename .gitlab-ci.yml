@@ -1,2 +1,6 @@
 before_script:
   - pwd
+
+ip:
+  script:
+    - curl ifconfig.me
