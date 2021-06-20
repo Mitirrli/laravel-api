@@ -3,6 +3,9 @@ FROM hampster/php-cli-base:${TAG}
 
 LABEL maintainer="Hampster <phper.blue@gmail.com>"
 
+# add opcache
+RUN docker-php-ext-install opcache
+
 COPY .docker/base/opcache/* $PHP_INI_DIR/conf.d
 
 ADD . .
