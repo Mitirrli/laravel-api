@@ -16,6 +16,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "alibabacloud/sdk": "^1.8",
+        "appstract/laravel-opcache": "^4.0",
         "barryvdh/laravel-ide-helper": "^2.10",
         "brainmaestro/composer-git-hooks": "^2.8",
         "fideloper/proxy": "^4.4",
