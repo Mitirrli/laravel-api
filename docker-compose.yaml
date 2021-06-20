@@ -4,7 +4,7 @@ services:
     laravel-api:
         container_name: laravel-api
         build:
-            context: .docker/development
+            context: .
             dockerfile: Dockerfile
         ports:
             - 8098:8000

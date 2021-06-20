@@ -1,5 +1,6 @@
 /vendor
 /node_modules
+/storage
 /stubs
 /tests
 /doc
