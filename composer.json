@@ -129,7 +129,8 @@
                 "laravel/tinker",
                 "facade/ignition",
                 "laravel/telescope",
-                "nunomaduro/collision"
+                "nunomaduro/collision",
+                "mll-lab/laravel-graphql-playground"
             ]
         },
         "merge-plugin": {

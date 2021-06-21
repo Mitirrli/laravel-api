@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register(\Laravel\Sail\SailServiceProvider::class);
             $this->app->register(\NunoMaduro\Collision\Adapters\Laravel\CollisionServiceProvider::class);
             $this->app->register(\Facade\Ignition\IgnitionServiceProvider::class);
+        }
+
+        // graphql 面板注册
+        if (\gethostbyname('qjdata.tpddns.cn') === Request::getClientIp() || $this->app->environment('local')) {
+            $this->app->register(\MLL\GraphQLPlayground\GraphQLPlaygroundServiceProvider::class);
         }
 
         $this->app->bind('Illuminate\Pagination\LengthAwarePaginator', function ($app, $options) {
