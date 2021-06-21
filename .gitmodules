@@ -1,6 +1,3 @@
-[submodule ".docker"]
-	path = .docker
-	url = https://github.com/Mitirrli/php-cli-base.git
 [submodule "package/tool"]
 	path = package/tool
 	url = ssh://git@quanjingshuju.com:222/yaoxiebang2/tool.git
