@@ -2,7 +2,7 @@ extend type Query {
     "获取资讯详情"
     new (id: ID! @eq): News @find
     "获取资讯列表"
-    news (search: String @search, orderBy: _ @orderBy(columns: ["id"])): [News!]! @paginate
+    news (tag_id: ID! @eq, search: String @search, orderBy: _ @orderBy(columns: ["id"])): [News!]! @paginate
     "获取资讯标签列表"
     tags: [NewsTag!]! @all
 }
