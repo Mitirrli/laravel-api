@@ -101,6 +101,11 @@
             "@php artisan ide-helper:meta",
             "@php artisan lighthouse:ide-helper"
         ],
+        "markdown": [
+            "rm -rf markdown",
+            "chmod a+x dump.sh",
+            "./dump.sh"
+        ],
         "serve": "docker exec -it laravel-api php -S 0.0.0.0:8000 -t public",
         "octane": "docker exec -it laravel-api php artisan octane:start --host=0.0.0.0 --watch",
         "deploy": [
