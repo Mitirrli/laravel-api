@@ -17,6 +17,12 @@ pipeline {
                     cp -f ".env.${gitlabBranch}" .env
                 """
 
+                echo "替换mysql redis地址为外网地址"
+                sh """
+                    sed -i 's/r-bp17f27en7xjhvedny.redis.rds.aliyuncs.com/r-bp17f27en7xjhvednypd.redis.rds.aliyuncs.com/g' .env
+                    sed -i 's/rm-bp15p803jpar70pbj125010.mysql.rds.aliyuncs.com/rm-bp15p803jpar70pbjgo.mysql.rds.aliyuncs.com/g' .env
+                """
+
                 echo "安装 依赖"
                 sh """
                     docker exec laravel-api composer i --ignore-platform-reqs
@@ -25,6 +31,11 @@ pipeline {
                 echo "数据 迁移"
                 sh """
                     docker exec laravel-api php artisan migrate
+                """
+
+                echo "覆盖 外网地址"
+                sh """
+                    cp -f ".env.${gitlabBranch}" .env
                 """
             }
         }
