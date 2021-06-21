@@ -77,10 +77,8 @@ pipeline {
                 at: [''],
                 atAll: false,
                 text: [
-                    "# 🐳 药械帮 2.0",
+                    "# 🐳 药械帮",
                     '---',
-                    "构建应用: <font color='#000000'>${APPLICATION}</font>",
-                    "",
                     "构建类型: <font color='#000000'>${gitlabActionType}</font>",
                     "",
                     "构建环境: <font color='#000000'>${gitlabBranch}</font>",
