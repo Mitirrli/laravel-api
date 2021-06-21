@@ -64,6 +64,8 @@ php tool/phploc.phar app package
 
 #### 使用 telescope 进行调试
 
+##### 在local环境可以通过浏览器进行访问
+
 #### 使用 tinker 进行调试
 
 ```
