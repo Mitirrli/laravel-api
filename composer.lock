@@ -5876,6 +5876,34 @@
             }
         },
         {
+            "name": "qjdata/product",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./package/product",
+                "reference": "abd41032bc2d241006c4ce3a2d8036c5695a6be5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Qjdata\\Products\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "huanglei",
+                    "email": "huanglei@quanjingshuju.com"
+                }
+            ],
+            "description": "Package description here.",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "qjdata/tool",
             "version": "dev-master",
             "dist": {
@@ -14206,7 +14234,8 @@
         "qjdata/tool": 20,
         "qjdata/user": 20,
         "qjdata/news": 20,
-        "qjdata/admin": 20
+        "qjdata/admin": 20,
+        "qjdata/product": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

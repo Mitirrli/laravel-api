@@ -3,7 +3,8 @@
         "qjdata/tool": "dev-master",
         "qjdata/user": "dev-master",
         "qjdata/news": "dev-master",
-        "qjdata/admin": "dev-master"
+        "qjdata/admin": "dev-master",
+        "qjdata/product": "dev-master"
     },
     "repositories": {
         "qjdata/tool": {
@@ -21,6 +22,10 @@
         "qjdata/admin": {
             "type": "path",
             "url": "./package/admin/"
+        },
+        "qjdata/product": {
+            "type": "path",
+            "url": "./package/product/"
         }
     }
 }

@@ -118,7 +118,7 @@ return [
     */
 
     'namespaces' => [
-        'models' => ['Qjdata\\News\\Models'],
+        'models' => ['Qjdata\\News\\Models', 'Qjdata\\Products\\Models'],
         'queries' => 'App\\GraphQL\\Queries',
         'mutations' => 'App\\GraphQL\\Mutations',
         'subscriptions' => 'App\\GraphQL\\Subscriptions',

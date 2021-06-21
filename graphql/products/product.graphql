@@ -1,0 +1,11 @@
+type Products {
+    id: ID!
+    uid: Integer!
+    product_name: String!
+    manufacturer_name: String!
+    pictures: String!
+    specification: String!
+    approval_number: String!
+    advantage: String!
+    video: String!
+}
