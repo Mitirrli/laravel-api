@@ -20,3 +20,4 @@ schema-directives.graphql
 .phpstorm.meta.php
 cghooks.lock
 supervisord.pid
+markdown
