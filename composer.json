@@ -108,7 +108,8 @@
             "@php artisan config:cache",
             "@php artisan route:cache",
             "@php artisan event:cache",
-            "@php artisan view:cache"
+            "@php artisan view:cache",
+            "@php artisan lighthouse:cache"
         ],
         "cghooks": "vendor/bin/cghooks",
         "check-style": "docker exec laravel-api vendor/bin/php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi",

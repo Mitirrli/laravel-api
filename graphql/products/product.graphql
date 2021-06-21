@@ -1,6 +1,6 @@
 type Products {
     id: ID!
-    uid: Integer!
+    uid: Int!
     product_name: String!
     manufacturer_name: String!
     pictures: String!
