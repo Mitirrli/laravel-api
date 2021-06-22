@@ -25,11 +25,6 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register(\Facade\Ignition\IgnitionServiceProvider::class);
         }
 
-        // graphql 面板注册
-        if ((\gethostbyname('qjdata.tpddns.cn') === Request::getClientIp()) || $this->app->environment('local')) {
-            $this->app->register(\MLL\GraphQLPlayground\GraphQLPlaygroundServiceProvider::class);
-        }
-
         $this->app->bind('Illuminate\Pagination\LengthAwarePaginator', function ($app, $options) {
             return new \App\Tool\Paginator($options['items'], $options['total'], $options['perPage'], $options['currentPage'], $options['options']);
         });
@@ -45,6 +40,11 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment('local')) {
             //预防 N+1 问题
             Model::preventLazyLoading(!\app()->isProduction());
+        }
+
+        // graphql 面板注册
+        if ((\gethostbyname('qjdata.tpddns.cn') === Request::getClientIp()) || $this->app->environment('local')) {
+            $this->app->register(\MLL\GraphQLPlayground\GraphQLPlaygroundServiceProvider::class);
         }
 
         //统一的返回
