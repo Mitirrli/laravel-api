@@ -5,4 +5,6 @@ extend type Query {
     news (tag_id: ID @eq, search: String @search, orderBy: _ @orderBy(columns: ["id"])): [News!]! @paginate
     "获取资讯标签列表"
     news_tags: [NewsTag!]! @all
+    "获取分享的资讯详情"
+    news_share (id: ID! @eq): NewsShare @find
 }

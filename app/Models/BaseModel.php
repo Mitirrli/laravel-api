@@ -6,7 +6,6 @@ use App\Traits\Filterable;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Watson\Validating\ValidatingTrait;
 
 class BaseModel extends Model
@@ -14,7 +13,6 @@ class BaseModel extends Model
     use Cachable;
     use Filterable;
     use HasFactory;
-    use SoftDeletes;
     use ValidatingTrait;
 
     public const CREATED_AT = 'create_time';
