@@ -23,18 +23,4 @@ class BaseModel extends Model
      * @var array
      */
     protected $rules = [];
-
-    /**
-     * trait与class属性冲突 使用方法引入.
-     *
-     * 共用的trait需要包含_init方法引入变量
-     */
-    public function __construct()
-    {
-        parent::__construct();
-
-        if (\method_exists($this, '_init')) {
-            $this->_init();
-        }
-    }
 }
