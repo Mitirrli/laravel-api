@@ -3,16 +3,13 @@
 namespace App\Traits;
 
 use Firebase\JWT\JWT;
+use Str;
 
 trait Token
 {
-    private static object $payLoad;
-
-    protected function getPayLoad(string $token): void
+    protected function getPayLoad(string $token): object
     {
-        $tks = \explode('.', $token);
-
-        self::$payLoad = 3 === \count($tks) ? JWT::jsonDecode(JWT::urlsafeB64Decode($tks[1])) : [];
+        return JWT::jsonDecode(JWT::urlsafeB64Decode(Str::of($token)->between('.', '.')));
     }
 
     protected function decodeJwt(string $token, string $secret): void

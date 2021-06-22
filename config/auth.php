@@ -42,8 +42,8 @@ return [
         ],
 
         'api' => [
-            'driver' => 'jwt',
-            'provider' => 'front',
+            'driver' => 'apiAuth',
+            'provider' => 'users',
             'hash' => false,
         ],
     ],
@@ -68,12 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
-        ],
-
-        'front' => [
-            'driver' => 'front',
-            'model' => \Qjdata\User\Models\User::class,
+            'model' => Qjdata\User\Models\User::class,
         ],
     ],
 
