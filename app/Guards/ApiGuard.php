@@ -17,7 +17,7 @@ class ApiGuard implements Guard
 
     public function __construct(Request $request)
     {
-        if (is_array($request->header('Authorization'))) {
+        if (\is_array($request->header('Authorization'))) {
             $this->token = '';
         } else {
             $this->token = $request->header('Authorization') ?? '';
