@@ -25,10 +25,7 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register(\Facade\Ignition\IgnitionServiceProvider::class);
         }
 
-        // graphql 面板注册
-        if ((\gethostbyname('qjdata.tpddns.cn') === Request::getClientIp()) || $this->app->environment('local')) {
-            $this->app->register(\MLL\GraphQLPlayground\GraphQLPlaygroundServiceProvider::class);
-        }
+        $this->app->register(\MLL\GraphQLPlayground\GraphQLPlaygroundServiceProvider::class);
 
         $this->app->bind('Illuminate\Pagination\LengthAwarePaginator', function ($app, $options) {
             return new \App\Tool\Paginator($options['items'], $options['total'], $options['perPage'], $options['currentPage'], $options['options']);
