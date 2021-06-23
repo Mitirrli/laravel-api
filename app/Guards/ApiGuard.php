@@ -29,14 +29,13 @@ class ApiGuard implements Guard
      *
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
      */
-    public function user()
+    public function user(): ?\Illuminate\Contracts\Auth\Authenticatable
     {
         if (!$this->hasUser()) {
             if (null === $this->id()) {
                 return null;
-            } else {
-                $this->user = User::where('uid', $this->id())->first();
             }
+            $this->user = User::where('uid', $this->id())->first();
         }
 
         return $this->user;
