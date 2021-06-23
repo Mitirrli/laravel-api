@@ -14,5 +14,5 @@ RUN composer deploy
 
 ADD supervisord.conf /etc/
 
-ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
+ENTRYPOINT ["sh", "./build.sh"]
 
