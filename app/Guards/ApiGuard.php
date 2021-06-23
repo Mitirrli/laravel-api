@@ -26,14 +26,34 @@ class ApiGuard implements Guard
 
     /**
      * Get the currently authenticated user.
+     *
+     * @return \Illuminate\Contracts\Auth\Authenticatable|null
      */
     public function user()
     {
-        if (empty($this->token)) {
+        if (!$this->hasUser()) {
+            if (null === $this->id()) {
+                return null;
+            } else {
+                $this->user = User::where('uid', $this->id())->first();
+            }
+        }
+
+        return $this->user;
+    }
+
+    /**
+     * Get the ID for the currently authenticated user.
+     *
+     * @return int|string|null
+     */
+    public function id()
+    {
+        if ('' === $this->token) {
             return null;
         }
 
-        return User::query()->where('uid', $this->getPayLoad($this->token)->uid)->first();
+        return $this->getPayLoad($this->token)->uid;
     }
 
     /**
@@ -55,14 +75,28 @@ class ApiGuard implements Guard
     }
 
     /**
-     * decode jwt for check.
+     * Determine if the current user is a guest.
+     *
+     * @return bool
+     */
+    public function guest(): bool
+    {
+        return !$this->check();
+    }
+
+    /**
+     * Determine if the current user is authenticated.
      *
      * @return bool
      */
     public function check(): bool
     {
-        $this->decodeJwt($this->token, \config('jwt.secret'));
+        try {
+            $this->decodeJwt($this->token, \config('jwt.secret'));
 
-        return true;
+            return true;
+        } catch (\Throwable) {
+            return false;
+        }
     }
 }
