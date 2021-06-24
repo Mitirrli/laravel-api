@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/health', App\Http\Controllers\Health::class)->name('K8S健康检查');
+
 Route::name('test.')->prefix('test')->group(function () {
     Route::get('business', App\Http\Controllers\Business::class)->name('业务异常');
     Route::get('system', App\Http\Controllers\System::class)->name('系统异常');
