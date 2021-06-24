@@ -1,8 +1,8 @@
 type NewsShare {
     id: ID!
     uid: Int!
-    new_id: Int!
-    new: News @belongsTo
+    news_id: Int!
+    news: News @belongsTo
     product: Products @belongsTo
     product_id: Int!
     create_time: Int!
