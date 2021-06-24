@@ -1,10 +1,10 @@
 extend type Query {
     "获取资讯详情"
-    new (id: ID! @eq): News @find
+    news (id: ID! @eq): News @find
     "获取资讯列表"
-    news (tag_id: ID @eq, search: String @search, orderBy: _ @orderBy(columns: ["id"])): [News!]! @paginate
+    news_list (tag_id: ID @eq, search: String @search, orderBy: _ @orderBy(columns: ["id"])): [News!]! @paginate
     "获取资讯标签列表"
-    news_tags: [NewsTag!]! @all
+    news_tag_list: [NewsTag!]! @all
     "获取分享的资讯详情"
     news_share (id: ID! @eq): NewsShare @find
 }
