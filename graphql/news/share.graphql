@@ -1,9 +1,0 @@
-type NewsShare {
-    id: ID!
-    uid: Int!
-    news_id: Int!
-    news: News @belongsTo
-    product: Products @belongsTo
-    product_id: Int!
-    create_time: Int!
-}

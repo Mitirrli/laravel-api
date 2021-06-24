@@ -1,5 +1,0 @@
-type NewsTag {
-    id: ID!
-    name: String!
-    news: [News!]! @hasMany
-}

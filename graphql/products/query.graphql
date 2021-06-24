@@ -1,4 +1,0 @@
-extend type Query {
-    "获取产品详情"
-    product (id: ID! @eq): Products @find
-}

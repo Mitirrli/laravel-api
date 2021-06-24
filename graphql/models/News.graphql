@@ -1,0 +1,38 @@
+extend type Query {
+    "获取资讯详情"
+    news (id: ID! @eq): News @find
+    "获取资讯列表"
+    news_list (tag_id: ID @eq, search: String @search, orderBy: _ @orderBy(columns: ["id"])): [News!]! @paginate
+    "获取资讯标签列表"
+    news_tag_list: [NewsTag!]! @all
+    "获取分享的资讯详情"
+    news_share (id: ID! @eq): NewsShare @find
+}
+
+type News {
+    id: ID!
+    title: String!
+    title_img: String!
+    description: String!
+    content: String!
+    reproduce_url: String!
+    tag: NewsTag @belongsTo
+    top_time: Int!
+    create_time: Int!
+}
+
+type NewsShare {
+    id: ID!
+    uid: Int!
+    news_id: Int!
+    news: News @belongsTo
+    product: Products @belongsTo
+    product_id: Int!
+    create_time: Int!
+}
+
+type NewsTag {
+    id: ID!
+    name: String!
+    news: [News!]! @hasMany
+}
