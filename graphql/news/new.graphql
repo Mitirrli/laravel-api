@@ -4,6 +4,7 @@ type News {
     title_img: String!
     description: String!
     content: String!
+    reproduce_url: String!
     tag: NewsTag @belongsTo
     top_time: Int!
     create_time: Int!
