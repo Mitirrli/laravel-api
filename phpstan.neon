@@ -15,6 +15,7 @@ parameters:
         - app/Http/Middleware
         - app/Http/Controllers
         - app/Guards
+        - app/Libraries
         - app/Exceptions
         - app/Traits
         - vendor
