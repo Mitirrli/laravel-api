@@ -90,8 +90,6 @@ pipeline {
                     "构建用户: <font color='#000000'>${gitlabUserName}</font>",
                     "",
                     "构建详情: <font color='#000000'>${commitMsg}</font>",
-                    "",
-                    "任务日志:[打开控制台](${RUN_DISPLAY_URL})"
                 ],
                 messageUrl: "${env.BUILD_URL}",
             )
