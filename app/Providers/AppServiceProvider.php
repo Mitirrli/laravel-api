@@ -37,10 +37,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if ($this->app->environment('local')) {
-            //预防 N+1 问题
-            Model::preventLazyLoading(!\app()->isProduction());
-        }
+        //预防 N+1 问题
+        Model::preventLazyLoading(!\app()->isProduction());
 
         //统一的返回
         Response::macro('output', function (int $code = 0, string $message = 'ok', $data = []) {

@@ -26,6 +26,7 @@ return [
     */
 
     'secret' => env('JWT_SECRET'),
+
     'admin_secret' => env('JWT_ADMIN_SECRET'),
 
     /*
