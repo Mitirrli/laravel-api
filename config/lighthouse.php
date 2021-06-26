@@ -36,6 +36,9 @@ return [
             // \Nuwave\Lighthouse\Support\Http\Middleware\AttemptAuthentication::class,
             \App\Http\Middleware\AttemptAuthentication::class,
 
+            // 提供了etag中间件作为http缓存
+            // 'etag',
+
             // Logs every incoming GraphQL query.
             // \Nuwave\Lighthouse\Support\Http\Middleware\LogGraphQLQueries::class,
         ],

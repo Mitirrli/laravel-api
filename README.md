@@ -38,6 +38,12 @@ composer serve
 composer octane
 ```
 
+#### 模型缓存
+##### 清除指定模型的缓存
+```
+php artisan modelCache:clear --model=App\Model
+```
+
 #### 代码检查
 
 ##### 代码拷贝/粘贴检测
