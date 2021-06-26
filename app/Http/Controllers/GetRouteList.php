@@ -9,7 +9,7 @@ class GetRouteList extends Controller
 {
     public function __invoke()
     {
-        Artisan::call('route:list --name="backendAPI " --columns=name,uri --json');
+        Artisan::call('route:list --name="backendAPI " --columns=name,uri,method --json');
 
         //获取满足条件的路由
         $result = \json_decode(Str::of(Artisan::output())->replace('backendAPI ', ''), true);
@@ -17,7 +17,9 @@ class GetRouteList extends Controller
         $temp = [];
         \array_walk($result, function (&$value) use (&$temp): void {
             $temp[\mb_substr($name = $value['name'], 0, $pos = \mb_strpos($name, '.'))][] = [
-                'uri' => $value['uri'], 'name' => \mb_substr($value['name'], $pos + 1),
+                'name' => \mb_substr($value['name'], $pos + 1),
+                'uri' => $value['uri'],
+                'method' => $value['method'],
             ];
         });
 

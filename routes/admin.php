@@ -11,6 +11,6 @@
 |
 */
 
-Route::name('权限.')->group(function () {
-	Route::get('route', App\Http\Controllers\GetRouteList::class)->name('获取路由列表');
+Route::name('工具.')->group(function () {
+    Route::get('route', App\Http\Controllers\GetRouteList::class)->name('获取路由列表');
 });
