@@ -3,13 +3,19 @@
 namespace App\Http\Controllers;
 
 use Artisan;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Str;
 
 class GetRouteList extends Controller
 {
-    public function __invoke()
+    /**
+     * 使用命名空间作为路由的id 后续开发不能修改代码路径.
+     *
+     * @return void
+     */
+    public function __invoke(): JsonResponse
     {
-        Artisan::call('route:list --name="backendAPI " --columns=name,uri,method --json');
+        Artisan::call('route:list --name="backendAPI " --columns=name,action --json');
 
         //获取满足条件的路由
         $result = \json_decode(Str::of(Artisan::output())->replace('backendAPI ', ''), true);
@@ -17,9 +23,8 @@ class GetRouteList extends Controller
         $temp = [];
         \array_walk($result, function (&$value) use (&$temp): void {
             $temp[\mb_substr($name = $value['name'], 0, $pos = \mb_strpos($name, '.'))][] = [
-                'name' => \mb_substr($value['name'], $pos + 1),
-                'uri' => $value['uri'],
-                'method' => $value['method'],
+                'name' => $name = \mb_substr($value['name'], $pos + 1),
+                'id' => \md5(Str::replace('\\', '', $value['action'])),
             ];
         });
 
