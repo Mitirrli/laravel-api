@@ -177,6 +177,7 @@ return [
          */
         Laravel\Scout\ScoutServiceProvider::class,
         Matchish\ScoutElasticSearch\ElasticSearchServiceProvider::class,
+        MLL\GraphQLPlayground\GraphQLPlaygroundServiceProvider::class,
 
         /*
          * Application Service Providers...
