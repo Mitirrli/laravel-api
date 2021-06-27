@@ -11,7 +11,8 @@ class AdminRbac
 {
     public function handle(Request $request, Closure $next): mixed
     {
-        \dd(\md5(Str::replace('\\', '', Route::currentRouteAction())));
+        // \dd(\md5(Str::replace('\\', '', Route::currentRouteAction())));
+        // TODO: admin权限
 
         return $next($request);
     }
