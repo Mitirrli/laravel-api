@@ -21,3 +21,4 @@ schema-directives.graphql
 cghooks.lock
 supervisord.pid
 markdown
+mysql_markdown
