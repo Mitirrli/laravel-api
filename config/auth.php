@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'api',
+        'guard' => 'web',
         'passwords' => 'users',
     ],
 
@@ -46,6 +46,12 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'admin' => [
+            'driver' => 'adminAuth',
+            'provider' => 'admin',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -70,6 +76,10 @@ return [
             'driver' => 'eloquent',
             'model' => Qjdata\User\Models\User::class,
         ],
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => Qjdata\Admin\Models\User::class,
+        ]
     ],
 
     /*

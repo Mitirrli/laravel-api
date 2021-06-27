@@ -6,9 +6,9 @@ use App\Traits\Token;
 use Illuminate\Auth\GuardHelpers;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
-use Qjdata\User\Models\User;
+use Qjdata\Admin\Models\User;
 
-class ApiGuard implements Guard
+class AdminGuard implements Guard
 {
     use GuardHelpers;
     use Token;
@@ -32,7 +32,7 @@ class ApiGuard implements Guard
                 return null;
             }
 
-            $this->user = User::where('uid', $this->id())->first();
+            $this->user = User::where('id', $this->id())->first();
         }
 
         return $this->user;
@@ -49,7 +49,7 @@ class ApiGuard implements Guard
             return null;
         }
 
-        return $this->getPayLoad($this->token)->uid;
+        return $this->getPayLoad($this->token)->id;
     }
 
     /**
@@ -82,7 +82,7 @@ class ApiGuard implements Guard
     public function check(): bool
     {
         try {
-            $this->decodeJwt($this->token, \config('jwt.secret'));
+            $this->decodeJwt($this->token, \config('jwt.admin_secret'));
 
             return true;
         } catch (\Throwable) {

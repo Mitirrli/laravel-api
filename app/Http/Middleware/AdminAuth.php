@@ -19,12 +19,7 @@ class AdminAuth
 
     public function handle(Request $request, Closure $next): mixed
     {
-        try {
-            $this->getPayLoad($this->token);
-
-            // 验签是否正确
-            $this->decodeJwt($this->token, \config('jwt.admin_secret'));
-        } catch (\Throwable) {
+        if (!\auth('admin')->check()) {
             return \response()->json(status: 401);
         }
 
