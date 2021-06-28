@@ -109,8 +109,6 @@
         "octane": "docker exec -it laravel-api php artisan octane:start --host=0.0.0.0 --watch",
         "deploy": [
             "composer install --optimize-autoloader --no-dev",
-            "@php artisan lighthouse:clear-cache",
-            "@php artisan lighthouse:cache",
             "@php artisan config:cache",
             "@php artisan route:cache",
             "@php artisan event:cache",
