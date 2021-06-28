@@ -18,9 +18,6 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment('local')) {
             $this->app->register(\Nuwave\Lighthouse\Tracing\TracingServiceProvider::class);
             $this->app->register(\Laravel\Tinker\TinkerServiceProvider::class);
-            $this->app->register(\Laravel\Sail\SailServiceProvider::class);
-            $this->app->register(\NunoMaduro\Collision\Adapters\Laravel\CollisionServiceProvider::class);
-            $this->app->register(\Facade\Ignition\IgnitionServiceProvider::class);
         }
 
         $this->app->bind('Illuminate\Pagination\LengthAwarePaginator', function ($app, $options) {

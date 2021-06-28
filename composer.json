@@ -129,11 +129,7 @@
     "extra": {
         "laravel": {
             "dont-discover": [
-                "laravel/sail",
                 "laravel/tinker",
-                "facade/ignition",
-                "laravel/telescope",
-                "nunomaduro/collision",
                 "mll-lab/laravel-graphql-playground"
             ]
         },
