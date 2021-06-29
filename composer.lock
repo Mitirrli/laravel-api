@@ -146,16 +146,16 @@
         },
         {
             "name": "alibabacloud/sdk",
-            "version": "1.8.1032",
+            "version": "1.8.1034",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aliyun/openapi-sdk-php.git",
-                "reference": "125612277d3a33d02512ada67f8f9bc0cf5670b6"
+                "reference": "b4050df1888825ec97790b06ef47eba282e8abb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aliyun/openapi-sdk-php/zipball/125612277d3a33d02512ada67f8f9bc0cf5670b6",
-                "reference": "125612277d3a33d02512ada67f8f9bc0cf5670b6",
+                "url": "https://api.github.com/repos/aliyun/openapi-sdk-php/zipball/b4050df1888825ec97790b06ef47eba282e8abb6",
+                "reference": "b4050df1888825ec97790b06ef47eba282e8abb6",
                 "shasum": ""
             },
             "require": {
@@ -380,7 +380,7 @@
                 "issues": "https://github.com/aliyun/openapi-sdk-php/issues",
                 "source": "https://github.com/aliyun/openapi-sdk-php"
             },
-            "time": "2021-06-25T02:51:46+00:00"
+            "time": "2021-06-28T12:08:59+00:00"
         },
         {
             "name": "asm89/stack-cors",
