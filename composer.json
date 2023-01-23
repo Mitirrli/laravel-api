@@ -48,7 +48,7 @@
         "phpstan/phpstan-deprecation-rules": "^0.12.6",
         "phpstan/phpstan-mockery": "^0.12.13",
         "phpunit/phpunit": "^9.3.3",
-        "vimeo/psalm": "^4.7"
+        "vimeo/psalm": "^5.5"
     },
     "suggest": {
         "ext-redis": "For better performance. ",
